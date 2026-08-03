@@ -79,4 +79,3 @@ Ask the user: "Do you use YouTube's algorithm to discover new content?" If yes, 
 5. invidious.io — Invidious: self-hostable web frontend for YouTube — public instances with Tor/I2P support, no JavaScript required
 6. grayjay.app — Grayjay: multi-platform video aggregator by FUTO — YouTube, Twitch, Rumble, Odysee, PeerTube, Nebula in one app
 7. revanced.app — ReVanced: community successor to YouTube Vanced — patches official app on-device, requires microG for login
-8. eylenburg.github.io/browser_comparison.htm — Eylenburg: browser comparison — includes ad-blocking capabilities relevant to browser-based YouTube viewing

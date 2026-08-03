@@ -81,16 +81,16 @@ Ask the user: **What's your primary concern about your digital footprint?** If i
 
 ## Sources
 
-1. [EFF: Opt Out October — daily privacy tips including searching for yourself, deleting old accounts, and removing personal info from search engines](https://eff.org/deeplinks/2025/09/opt-out-october-daily-tips-protect-your-privacy-and-security)
-2. [EFF: Behind the One-Way Mirror](https://eff.org/wp/behind-the-one-way-mirror) — Deep dive into corporate surveillance technology, identifiers, tracking networks, and how profiles are built from mundane data points
-3. [EFF Surveillance Self-Defense: Protecting Yourself on Social Networks](https://ssd.eff.org/module/protecting-yourself-social-networks) — Privacy settings, data collection by social platforms, keeping identities separate
-4. [PrivacyGuides: Stay Safe, but Stay Connected](https://privacyguides.org/articles/2025/06/10/stay-safe-but-stay-connected/) — How to participate online while minimizing traces, pseudonyms, identity separation, metadata removal
+1. eff.org/deeplinks/2025/09/opt-out-october-daily-tips-protect-your-privacy-and-security — EFF: Opt Out October — daily privacy tips including searching for yourself, deleting old accounts, and removing personal info from search engines
+2. eff.org/wp/behind-the-one-way-mirror — EFF: Behind the One-Way Mirror — Deep dive into corporate surveillance technology, identifiers, tracking networks, and how profiles are built from mundane data points
+3. ssd.eff.org/module/protecting-yourself-social-networks — EFF Surveillance Self-Defense: Protecting Yourself on Social Networks — Privacy settings, data collection by social platforms, keeping identities separate
+4. privacyguides.org/articles/2025/06/10/stay-safe-but-stay-connected/ — PrivacyGuides: Stay Safe, but Stay Connected — How to participate online while minimizing traces, pseudonyms, identity separation, metadata removal
 
 ## Guides
 
-1. [EFF SSD: How to Manage Your Digital Footprint](https://ssd.eff.org/module/how-to-manage-your-digital-footprint) — Comprehensive guide covering self-searching, account deletion, social media cleanup
-2. [Google: Results about you](https://myactivity.google.com/results-about-you) — Request removal of personal info from search results, proactive monitoring
-3. [Just Delete Me](https://justdeleteme.xyz) — Directory of direct account deletion links organized by difficulty, 1,455+ sites
-4. [Have I Been Pwned](https://haveibeenpwned.com) — Check if your email or phone appears in known data breaches
-5. [WhatsMyName](https://whatsmyname.app) — Check where your username exists across 700+ sites
-6. [PrivacyGuides: Account Deletion](https://privacyguides.org/en/basics/account-deletion/) — Tips for finding and deleting old accounts, GDPR erasure rights
+1. ssd.eff.org/module/how-to-manage-your-digital-footprint — EFF SSD: How to Manage Your Digital Footprint — Comprehensive guide covering self-searching, account deletion, social media cleanup
+2. myactivity.google.com/results-about-you — Google: Results about you — Request removal of personal info from search results, proactive monitoring
+3. justdeleteme.xyz — Just Delete Me — Directory of direct account deletion links organized by difficulty, 1,455+ sites
+4. haveibeenpwned.com — Have I Been Pwned — Check if your email or phone appears in known data breaches
+5. whatsmyname.app — WhatsMyName — Check where your username exists across 700+ sites
+6. privacyguides.org/en/basics/account-deletion/ — PrivacyGuides: Account Deletion — Tips for finding and deleting old accounts, GDPR erasure rights

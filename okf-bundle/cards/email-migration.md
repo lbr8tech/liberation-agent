@@ -29,7 +29,7 @@ The user's device type is known from onboarding. Guide them to the best fit:
 - **Proton Mail** (free tier available): Swiss jurisdiction, PGP-based encryption, Bridge for desktop clients on paid plans. Best for users who want desktop email client access.
 - **Tuta** (free tier available): German jurisdiction, post-quantum encryption, native desktop apps, available on F-Droid, encrypted subject lines. For de-Googled Android phones, Tuta is the better choice — it bypasses Google Play Services entirely.
 
-Both offer E2E encryption by default. Share the [Eylenburg comparison](https://eylenburg.github.io/cloud_comparison.htm) [4] for users who want to see 42 providers analyzed across encryption, jurisdiction, and features.
+Both offer E2E encryption by default. Share the https://eylenburg.github.io/cloud_comparison.htm — Eylenburg comparison [4] for users who want to see 42 providers analyzed across encryption, jurisdiction, and features.
 
 ### Step 2: Create the new account
 Walk the user through signing up at the chosen provider's website. Both have free tiers that include enough storage for personal use. Remind them to use a strong, unique password (stored in their password manager).
@@ -68,18 +68,18 @@ Ask the user: **Which email provider are you migrating from?** Gmail vs Outlook 
 
 ## Sources
 
-1. [CNIL: Google fined €325M for displaying ads as emails in Gmail without consent, 2025](https://cnil.fr/en/cookies-and-advertisements-inserted-between-emails-google-fined-325-million-euros-cnil)
-2. [EFF: FTC complaint against Google for Education for scanning student emails and building advertising profiles](https://eff.org/files/2015/12/01/ftccomplaint-googleforeducation.pdf)
-3. [EPIC: Google admits to data-mining student emails in court filings](https://archive.epic.org/2014/03/google-admits-to-data-mining-s.html)
-4. [Thele v. Google: class action over Gemini AI scanning Gmail/Chat/Meet without consent, Oct 2025](https://classaction.org/media/thele-v-google-complaint_2.pdf)
-5. [Proton: new Outlook shares data with 801 third parties, transmits IMAP/SMTP credentials to Microsoft cloud](https://proton.me/blog/outlook-is-microsofts-new-data-collection-service)
-6. [Schneier: new Outlook conducts extensive surveillance, shares data with advertisers](https://schneier.com/blog/archives/2024/04/surveillance-by-the-new-microsoft-outlook-app.html)
-7. [Meister Security: technical analysis of new Outlook MITM architecture](https://blog.meister-security.de/new-outlook-the-end-of-email-privacy/)
-8. [ZDNET: Google denies but class action alleges Gemini AI scanning of Gmail](https://zdnet.com/article/google-denies-analyzing-your-emails-for-ai-training-heres-what-happened/)
+1. cnil.fr/en/cookies-and-advertisements-inserted-between-emails-google-fined-325-million-euros-cnil — CNIL: Google fined €325M for displaying ads as emails in Gmail without consent, 2025
+2. eff.org/files/2015/12/01/ftccomplaint-googleforeducation.pdf — EFF: FTC complaint against Google for Education for scanning student emails and building advertising profiles
+3. archive.epic.org/2014/03/google-admits-to-data-mining-s.html — EPIC: Google admits to data-mining student emails in court filings
+4. classaction.org/media/thele-v-google-complaint_2.pdf — Thele v. Google: class action over Gemini AI scanning Gmail/Chat/Meet without consent, Oct 2025
+5. proton.me/blog/outlook-is-microsofts-new-data-collection-service — Proton: new Outlook shares data with 801 third parties, transmits IMAP/SMTP credentials to Microsoft cloud
+6. schneier.com/blog/archives/2024/04/surveillance-by-the-new-microsoft-outlook-app.html — Schneier: new Outlook conducts extensive surveillance, shares data with advertisers
+7. blog.meister-security.de/new-outlook-the-end-of-email-privacy/ — Meister Security: technical analysis of new Outlook MITM architecture
+8. zdnet.com/article/google-denies-analyzing-your-emails-for-ai-training-heres-what-happened/ — ZDNET: Google denies but class action alleges Gemini AI scanning of Gmail
 
 ## Guides
 
-1. [Proton Mail — official website](https://proton.me) — E2E encrypted email, Swiss jurisdiction, free tier available
-2. [Tuta — official website](https://tuta.com) — E2E encrypted email, German jurisdiction, post-quantum, F-Droid, free tier available
-3. [PrivacyGuides: encrypted email recommendations](https://privacyguides.org/en/email/) — Proton Mail, Tuta, Mailbox.org
-4. [Eylenburg: cloud, sync & email services comparison](https://eylenburg.github.io/cloud_comparison.htm) — 42 providers with encryption, jurisdiction, and feature analysis
+1. proton.me — Proton Mail — official website — E2E encrypted email, Swiss jurisdiction, free tier available
+2. tuta.com — Tuta — official website — E2E encrypted email, German jurisdiction, post-quantum, F-Droid, free tier available
+3. privacyguides.org/en/email/ — PrivacyGuides: encrypted email recommendations — Proton Mail, Tuta, Mailbox.org
+4. eylenburg.github.io/cloud_comparison.htm — Eylenburg: cloud, sync & email services comparison — 42 providers with encryption, jurisdiction, and feature analysis

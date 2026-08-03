@@ -73,12 +73,12 @@ Ask the user: **Do you use Proton Mail?** If yes, SimpleLogin is the natural cho
 
 ## Sources
 
-1. [PrivacyGuides: Email Aliasing guide](https://privacyguides.org/en/email-aliasing/) — Comprehensive recommendations for email aliasing services
-2. [Secure Mail Guide: Email aliases and privacy](https://securemailguide.com/posts/email-aliases-privacy/) — Technical overview of how aliasing protects against correlation
-3. [The New Oil: Email aliasing guide](https://thenewoil.org/en/guides/moderately-important/email-aliasing/) — Practical guide for implementing email aliasing
+1. privacyguides.org/en/email-aliasing/ — PrivacyGuides: Email Aliasing guide — Comprehensive recommendations for email aliasing services
+2. securemailguide.com/posts/email-aliases-privacy/ — Secure Mail Guide: Email aliases and privacy — Technical overview of how aliasing protects against correlation
+3. thenewoil.org/en/guides/moderately-important/email-aliasing/ — The New Oil: Email aliasing guide — Practical guide for implementing email aliasing
 
 ## Guides
 
-1. [SimpleLogin — official website](https://simplelogin.io) — Proton-owned aliasing service, 10 aliases free, browser extension
-2. [Addy.io — official website](https://addy.io) — Open source aliasing service, generous free tier, PGP on all tiers
-3. [PrivacyGuides: Email Aliasing](https://privacyguides.org/en/email-aliasing/) — Service recommendations and setup guide
+1. simplelogin.io — SimpleLogin — official website — Proton-owned aliasing service, 10 aliases free, browser extension
+2. addy.io — Addy.io — official website — Open source aliasing service, generous free tier, PGP on all tiers
+3. privacyguides.org/en/email-aliasing/ — PrivacyGuides: Email Aliasing — Service recommendations and setup guide

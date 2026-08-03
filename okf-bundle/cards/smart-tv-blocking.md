@@ -95,9 +95,14 @@ Also ask: **What brand is your TV?** Samsung and LG settings are organized diffe
 
 ## Sources
 
-1. [Gamers Nexus investigation: LG spyware in monitors and TVs, wiretapping concerns, Texas AG settlement](https://youtube.com/watch?v=Q9uefFYe6bM) — Comprehensive investigation covering ACR tracking, microphone concerns, firmware re-enabling tracking, and the Texas AG lawsuit
+1. ftc.gov/news-events/news/press-releases/2017/02/vizio-pay-22-million-ftc-state-new-jersey-settle-charges-it-collected-viewing-histories-11-million — FTC: Vizio paid $2.2M for collecting viewing data on 11M TVs without consent
+2. texasattorneygeneral.gov/news/releases/attorney-general-ken-paxton-secures-major-agreement-lg-protect-texans-privacy-and-stop-data-being — Texas AG: LG settlement over secret ACR data collection
+3. youtube.com/watch?v=Q9uefFYe6bM — Gamers Nexus: DO NOT BUY — LG Spyware TVs, Monitors, and Wiretapping Concerns
+4. ucl.ac.uk/news/2024/nov/smart-tv-tracking-raises-privacy-concerns — UCL: ACR tracking captures content from external HDMI devices
+5. samsung.com/us/info/privacy/smarttv/ — Samsung: SmartTV privacy policy — voice recognition data collection disclosures
+6. eff.org/deeplinks/2015/02/big-brother-listening-users-need-ability-teach-smart-tvs-new-lessons — EFF: smart TV voice recognition and privacy concerns
 
 ## Guides
 
-1. [HaGeZi: DNS blocklists — smart TV and device tracking categories](https://github.com/hagezi/dns-blocklists)
-2. [Perflyst: smart TV blocklist for Pi-hole/AdGuard Home](https://github.com/Perflyst/PiHoleBlocklist/blob/master/SmartTV.txt)
+1. github.com/hagezi/dns-blocklists — HaGeZi: DNS blocklists — smart TV and device tracking categories
+2. github.com/Perflyst/PiHoleBlocklist/blob/master/SmartTV.txt — Perflyst: smart TV blocklist for Pi-hole/AdGuard Home

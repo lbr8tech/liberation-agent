@@ -57,14 +57,14 @@ Ask the user: **Are you a California resident?** If yes, use DROP as the primary
 
 ## Sources
 
-1. [EFF: 750 data brokers identified across state registries, hundreds failing to register](https://eff.org/deeplinks/2025/06/why-are-hundreds-data-brokers-not-registering-states) — Analysis with Privacy Rights Clearinghouse
-2. [EFF: 43% of California data brokers ignore legally-mandated access requests](https://eff.org/deeplinks/2025/08/data-brokers-are-ignoring-privacy-law-we-deserve-better) — UC Irvine research
-3. [EFF: Behind the One-Way Mirror](https://eff.org/wp/behind-the-one-way-mirror) — Deep dive into corporate surveillance technology, data brokers, real-time bidding, and how trackers link data to people
+1. eff.org/deeplinks/2025/06/why-are-hundreds-data-brokers-not-registering-states — EFF: 750 data brokers identified across state registries, hundreds failing to register — Analysis with Privacy Rights Clearinghouse
+2. eff.org/deeplinks/2025/08/data-brokers-are-ignoring-privacy-law-we-deserve-better — EFF: 43% of California data brokers ignore legally-mandated access requests — UC Irvine research
+3. eff.org/wp/behind-the-one-way-mirror — EFF: Behind the One-Way Mirror — Deep dive into corporate surveillance technology, data brokers, real-time bidding, and how trackers link data to people
 
 ## Guides
 
-1. [PrivacyGuides: Data Removal Services](https://privacyguides.org/en/data-broker-removals/) — Manual opt-out links, EasyOptOuts recommendation, vetting criteria
-2. [BADBOOL: Big Ass Data Broker Opt-Out List](https://github.com/yaelwrites/Big-Ass-Data-Broker-Opt-Out-List) — Community-maintained directory of direct opt-out links for every major data broker, free, organized by priority
-3. [Griffin Boyce: data broker opt-out list](https://github.com/glamrock/data-brokers) — Telemarketing, direct mail, and credit offer opt-outs
-4. [California DROP: free government-backed deletion request platform](https://oag.ca.gov/privacy/drop)
-5. [Privacy Rights Clearinghouse: data broker registry](https://privacyrights.org/data-broker-registry) — Searchable data broker registry across all state registries
+1. privacyguides.org/en/data-broker-removals/ — PrivacyGuides: Data Removal Services — Manual opt-out links, EasyOptOuts recommendation, vetting criteria
+2. github.com/yaelwrites/Big-Ass-Data-Broker-Opt-Out-List — BADBOOL: Big Ass Data Broker Opt-Out List — Community-maintained directory of direct opt-out links for every major data broker, free, organized by priority
+3. github.com/glamrock/data-brokers — Griffin Boyce: data broker opt-out list — Telemarketing, direct mail, and credit offer opt-outs
+4. oag.ca.gov/privacy/drop — California DROP: free government-backed deletion request platform
+5. privacyrights.org/data-broker-registry — Privacy Rights Clearinghouse: data broker registry — Searchable data broker registry across all state registries

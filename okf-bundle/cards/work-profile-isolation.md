@@ -67,13 +67,13 @@ Ask the user: **Which apps do you most want to isolate?** Guide them to think ab
 
 ## Sources
 
-1. [Ars Technica: Meta and Yandex de-anonymizing Android users](https://arstechnica.com/security/2025/06/meta-and-yandex-are-de-anonymizing-android-users-web-browsing-identifiers/) — Tracking code abuses local network ports to link web browsing to app identities, bypassing Android sandboxing
-2. [Which?: App privacy investigation](https://which.co.uk/news/article/how-much-do-apps-know-about-you-5-ways-to-improve-app-privacy-aJ4p38G3oS1x) — 20 apps, 117 tracking companies, 882 permissions, 78 "risky" permissions
+1. arstechnica.com/security/2025/06/meta-and-yandex-are-de-anonymizing-android-users-web-browsing-identifiers/ — Ars Technica: Meta and Yandex de-anonymizing Android users — Tracking code abuses local network ports to link web browsing to app identities, bypassing Android sandboxing
+2. which.co.uk/news/article/how-much-do-apps-know-about-you-5-ways-to-improve-app-privacy-aJ4p38G3oS1x — Which?: App privacy investigation — 20 apps, 117 tracking companies, 882 permissions, 78 "risky" permissions
 
 ## Guides
 
-1. [EFF Surveillance Self-Defense: Android privacy and security settings](https://ssd.eff.org/module/b5b05223-6609-4aac-b8c4-4dec2c0ea175) — Comprehensive Android privacy guide
-2. [PrivacyGuides: Android general apps — Shelter and Private Space recommendations](https://privacyguides.org/en/android/general-apps/)
-3. [Android Open Source Project: Private Space technical documentation](https://source.android.com/docs/security/features/private-space)
-4. [Shelter — F-Droid page](https://f-droid.org/packages/net.typeblog.shelter/) — FOSS work profile manager
-5. [GrapheneOS: features overview](https://grapheneos.org/features) — User profiles, separate encryption keys, Storage Scopes, Contact Scopes
+1. ssd.eff.org/module/b5b05223-6609-4aac-b8c4-4dec2c0ea175 — EFF Surveillance Self-Defense: Android privacy and security settings — Comprehensive Android privacy guide
+2. privacyguides.org/en/android/general-apps/ — PrivacyGuides: Android general apps — Shelter and Private Space recommendations
+3. source.android.com/docs/security/features/private-space — Android Open Source Project: Private Space technical documentation
+4. f-droid.org/packages/net.typeblog.shelter/ — Shelter — F-Droid page — FOSS work profile manager
+5. grapheneos.org/features — GrapheneOS: features overview — User profiles, separate encryption keys, Storage Scopes, Contact Scopes

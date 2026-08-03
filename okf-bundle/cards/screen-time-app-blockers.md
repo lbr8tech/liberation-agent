@@ -21,8 +21,8 @@ Your phone's interface is engineered to keep you hooked. Researchers identified 
 
 ## Coaching Flow
 
-### Step 1: Assess the User's Platforms and Pain Points
-Ask the user: "Which apps or websites eat the most of your attention?" Common answers: Instagram, TikTok, YouTube, Twitter/X, Reddit, news sites, games. Also ask which device they use most — Android, iOS, desktop, or all three. Based on their answer, recommend the right tool(s) below.
+### Step 1: Identify the user's pain points
+Ask the user: "Which apps or websites eat the most of your attention?" Common answers: Instagram, TikTok, YouTube, Twitter/X, Reddit, news sites, games. Based on the user's platform (already known from onboarding), recommend the right tool(s) below.
 
 ### Step 2: Install App Blockers (Android)
 Guide the user to install **Curbox** from F-Droid. Explain that it has no internet permission — it physically cannot transmit data. Walk them through blocking apps completely or using granular UI hiding (e.g., hide YouTube's home feed but keep search, hide Instagram explore but keep DMs). Highlight the short-form content blocker that specifically targets Instagram Reels and YouTube Shorts. If they want schedule-based blocking, show them how to set time windows.
@@ -49,8 +49,9 @@ Ask the user: "Do you want friction (delays, grayscale) or hard blocks (schedule
 
 ## Sources
 
-1. Researchers identified 63 engagement-maximizing design patterns across the 17 largest online platforms — social media apps use twice as many as any other category (referenced in the Center for Humane Technology and related research)
-2. Johann Hari, "Stolen Focus: Why You Can't Pay Attention" — comprehensive analysis of how the attention economy deliberately fractures focus through design patterns optimized for engagement over wellbeing
+1. theguardian.com/science/2022/jan/02/attention-span-focus-screens-apps-smartphones-social-media — The Guardian: Your attention didn't collapse. It was stolen — Johann Hari on how the attention economy deliberately fractures focus
+2. npr.org/2018/02/06/583648004/former-google-executive-warns-smartphones-keep-us-hooked — NPR: Former Google design ethicist Tristan Harris on how smartphones keep users hooked
+3. arxiv.org/html/2411.12083v2 — arXiv: The Engagement-Prolonging Designs Teens Encounter on Very Large Online Platforms — 63 design patterns across 17 platforms, 583 instances
 
 ## Guides
 

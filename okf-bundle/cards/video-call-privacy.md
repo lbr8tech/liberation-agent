@@ -57,14 +57,17 @@ Ask the user: **What's your primary use case?** 1:1 calls with privacy-minded co
 
 ## Sources
 
-1. [EFF: What You Should Know About Online Tools During COVID-19](https://eff.org/deeplinks/2020/03/what-you-should-know-about-online-tools-during-covid-19-crisis) — Documents Zoom's data collection, attention tracking, and privacy issues
-2. [IT Brew: Google Gemini AI recorded meetings without consent](https://itbrew.com/stories/2025/02/13/google-s-gemini-ai-recorded-meetings-without-consent-two-usaid-staffers-tell-it-brew) — Workspace update turned on AI recording by default
-3. [Privacy Company: Dutch government DPIA on Microsoft Teams](https://privacycompany.eu/blog/new-dpia-for-the-dutch-government-and-universities-on-microsoft-teams-onedrive-and-sharepoint-online) — Concluded organizations should not use Teams for sensitive data due to US surveillance access; Teams E2EE is 1:1 only
+1. eff.org/deeplinks/2020/03/what-you-should-know-about-online-tools-during-covid-19-crisis — EFF: What You Should Know About Online Tools — documents Zoom's attendee attention tracking, admin dashboards with real-time user activity, IP/location/device info per participant
+2. eff.org/deeplinks/2020/06/will-zoom-bring-encryption-people-who-need-it-most — EFF: Will Zoom Bring Encryption to People Who Need It Most? — Zoom CEO admitted withholding E2EE from free users to "work together with FBI, with local law enforcement"
+3. apnews.com/article/fact-check-zoom-ai-privacy-terms-of-service-06ff47e47439c2173390a4ca1389f652 — AP News: Zoom AI training terms controversy — Zoom updated terms to claim rights to customer data for AI training, backtracked after backlash
+4. techcrunch.com/2023/08/08/zoom-data-mining-for-ai-terms-gdpr-eprivacy/ — TechCrunch: Zoom's legal tangle over AI data mining under GDPR — EU legal experts say Zoom needs opt-in consent for AI training
+5. itbrew.com/stories/2025/02/13/google-s-gemini-ai-recorded-meetings-without-consent-two-usaid-staffers-tell-it-brew — IT Brew: Google Gemini AI recorded USAID meetings without consent — Workspace update turned on AI recording by default
+6. privacycompany.eu/blog/new-dpia-for-the-dutch-government-and-universities-on-microsoft-teams-onedrive-and-sharepoint-online — Privacy Company: Dutch government DPIA on Microsoft Teams — concluded organizations should not use Teams for sensitive data due to US surveillance access; Teams E2EE is 1:1 only
 
 ## Guides
 
-1. [PrivacyGuides: real-time communication recommendations](https://privacyguides.org/en/real-time-communication/) — Signal, SimpleX, Briar with evaluation criteria
-2. [Signal — official website](https://signal.org/) — E2EE messaging and video calls
-3. [Proton Meet — official page](https://proton.me/meet) — Always-on E2EE video conferencing, MLS protocol, Swiss jurisdiction
-4. [Jitsi — official website](https://jitsi.org/) — Open-source video conferencing, self-hostable
-5. [Brave Talk — official page](https://brave.com/talk/) — Browser-based private video calls, no login required
+1. privacyguides.org/en/real-time-communication/ — PrivacyGuides: real-time communication recommendations — Signal, SimpleX, Briar with evaluation criteria
+2. signal.org/ — Signal — official website — E2EE messaging and video calls
+3. proton.me/meet — Proton Meet — official page — Always-on E2EE video conferencing, MLS protocol, Swiss jurisdiction
+4. jitsi.org/ — Jitsi — official website — Open-source video conferencing, self-hostable
+5. brave.com/talk/ — Brave Talk — official page — Browser-based private video calls, no login required

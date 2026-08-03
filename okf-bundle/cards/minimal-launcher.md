@@ -55,13 +55,13 @@ No onboarding-level questions needed here. The main decision is **which launcher
 
 ## Sources
 
-1. [The Guardian: Johann Hari — "Your attention didn't collapse. It was stolen"](https://www.theguardian.com/science/2022/jan/02/attention-span-focus-screens-apps-smartphones-social-media) — Documents how tech companies engineer attention capture.
+1. www.theguardian.com/science/2022/jan/02/attention-span-focus-screens-apps-smartphones-social-media — The Guardian: Johann Hari — "Your attention didn't collapse. It was stolen" — Documents how tech companies engineer attention capture.
 
 ## Guides
 
-1. [Olauncher — official website](https://olauncher.app) — Text-only launcher for Android, recommended starting point
-2. [KISS Launcher — F-Droid page](https://f-droid.org/packages/fr.neamar.kiss) — Search-focused, 250KB, zero internet
-3. [Mako — GitHub](https://github.com/rama-io/mako) — Privacy-first, two permissions, GrapheneOS-verified
-4. [Still Launcher — GitHub](https://github.com/8tp/still-launcher) — Strictest option, no internet permission, monochrome text-only
-5. [F-Droid: launcher category](https://f-droid.org/en/categories/launcher/) — FOSS Android launchers with verified no-tracker builds
-6. [reysu.io: convert iPhone to dumb phone](https://reysu.io/dumbphone) — Full guide for iOS: Focus Modes, Screen Time, grayscale, widget tricks
+1. olauncher.app — Olauncher — official website — Text-only launcher for Android, recommended starting point
+2. f-droid.org/packages/fr.neamar.kiss — KISS Launcher — F-Droid page — Search-focused, 250KB, zero internet
+3. github.com/rama-io/mako — Mako — GitHub — Privacy-first, two permissions, GrapheneOS-verified
+4. github.com/8tp/still-launcher — Still Launcher — GitHub — Strictest option, no internet permission, monochrome text-only
+5. f-droid.org/en/categories/launcher/ — F-Droid: launcher category — FOSS Android launchers with verified no-tracker builds
+6. reysu.io/dumbphone — reysu.io: convert iPhone to dumb phone — Full guide for iOS: Focus Modes, Screen Time, grayscale, widget tricks
