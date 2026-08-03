@@ -16,52 +16,64 @@ related:
   - "cards/phone-degoogling.md"
 ---
 
-## Why
+## Context for the Agent
 
-Android apps can see each other. Meta and Yandex have been caught abusing local network ports to silently link your web browsing to your Facebook, Instagram, and Yandex app identities — bypassing Android's sandbox entirely (Ars Technica, 2025). A consumer investigation across just 20 apps found 117 third-party tracking companies and 882 permissions requested (Which?, 2024). Profiling happens across apps, not within a single one.
+This card is for Android users who want to prevent apps from cross-referencing data and tracking them across services. Use it when the user has social media, Google, or employer apps they don't fully trust sharing data with the rest of their phone.
 
-App isolation puts apps you don't fully trust — social media, Google services, employer apps — into a separate, sandboxed profile with its own file system, permissions, and encryption keys. Apps in one profile cannot read data from another. You can freeze the entire profile when not in use, killing all background activity and notifications.
+## Why This Matters
 
-## Steps
+Android apps can see each other. Meta and Yandex have been caught abusing local network ports to silently link your web browsing to your Facebook, Instagram, and Yandex app identities — bypassing Android's sandbox entirely [1]. A consumer investigation across just 20 apps found 117 third-party tracking companies and 882 permissions requested [2]. Profiling happens across apps, not within a single one. App isolation puts untrusted apps into a separate profile with its own file system, permissions, and encryption keys — apps in one profile cannot read data from another.
 
-### General
+## Coaching Flow
 
-**Android 15+: Use Private Space (built-in)**
-Go to Settings → Security & Privacy → Private Space. This is a native OS feature — no third-party app needed. Apps installed in Private Space are completely isolated from your main profile. You can lock the space with a single tap, hiding all apps and stopping all background activity. Use a separate Google Account for maximum separation.
+### Step 1: Check the user's Android version
+The user's device is known from onboarding. If they're on **Android 15+**, guide them to use the built-in **Private Space** feature. If they're on **Android 14 or earlier**, guide them to use **Shelter** from F-Droid.
 
-**Android <15: Use Shelter (F-Droid)**
-Shelter creates an isolated work profile using Android's built-in work profile feature. Move social media, Google apps, and any app you want compartmentalized into the work profile. Disable the work profile when you don't want distractions — all apps in it go silent, produce no notifications, and consume no battery. Also useful on degoogled phones: put apps that need Google services in the work profile to isolate them.
+### Step 2: Set up Private Space (Android 15+)
+Walk the user through:
+1. Settings → Security & Privacy → Private Space
+2. Follow the on-screen setup (this creates a completely isolated profile)
+3. Install the apps they want to isolate in Private Space
+4. Show them how to lock the space with a single tap — this hides all apps and stops all background activity
+5. If they use a Google Account, recommend using a separate Google Account inside Private Space for maximum separation
 
-**GrapheneOS: Use secondary user profiles for maximum isolation**
-Each user profile is a fully separate Android environment with its own apps, files, settings, and encryption keys. You can end a profile's session to put its data at rest — removing encryption keys from memory. GrapheneOS recommends Private Space as the most convenient option, but secondary users provide the strongest separation.
+### Step 3: Set up Shelter (Android 14 or earlier)
+Walk the user through:
+1. Install Shelter from F-Droid [4]
+2. Open Shelter — it will prompt to create a work profile
+3. Once created, select apps to move into the work profile (social media, Google apps, employer apps, any app you don't fully trust)
+4. Show them how to disable the work profile when not in use — this freezes all apps in it, killing background activity and notifications
 
-### iOS
+### Step 4: Decide which apps to isolate
+Guide the user on what to put in the isolated profile:
+- **Social media:** Facebook, Instagram, TikTok, Twitter/X, Snapchat, WhatsApp
+- **Google services:** Google Play Services, Google Maps, Google Photos
+- **Employer apps:** Microsoft Teams, Slack, Outlook (work account)
+- **Any app with aggressive tracking:** Shopping apps, news apps with many ad SDKs
 
-No equivalent. iOS does not support work profiles or isolated app spaces outside of MDM (enterprise). Use Focus Modes + Screen Time as the closest alternative (see screen-time-app-blockers card).
+### Step 5: For GrapheneOS users, explain Storage Scopes
+If the user is on GrapheneOS, explain that they can use Storage Scopes and Contact Scopes per-profile for even finer-grained control [5]. Each profile has separate encryption keys.
 
-## Going Further
+## Decision Points
 
-**Private Space apps bypass VPN**
-A major gotcha: apps in Private Space do not automatically use your main profile's VPN. You must install and configure a VPN separately inside the Private Space, or your isolated apps will connect with your real IP. The same applies to work profiles and secondary user profiles — each has independent VPN configuration.
+Ask the user: **Which apps do you most want to isolate?** Guide them to think about (a) apps with the most tracking SDKs (social media), (b) employer apps that shouldn't see personal data, and (c) apps they use infrequently but don't want to delete.
 
-**Private Space apps can't run in background when locked**
-When Private Space is locked, apps inside it are completely stopped. They cannot show notifications, track health data, or perform any background tasks. Do not put apps that need background activity (medical monitoring, alarm systems) in Private Space.
+## Pitfalls
 
-**Shelter is in maintenance mode**
-Shelter's developer states the app is in "effective maintenance mode" — it will continue to receive Android compatibility updates, but no new features are planned. If you're on Android 15+, Private Space is the forward-looking choice.
-
-**On GrapheneOS: keep the owner profile empty**
-Many GrapheneOS users keep their owner profile nearly empty and use a secondary user profile as their daily driver. This way, if a profile needs to be deleted for any reason, it can be done without a factory reset. The owner profile can also control which apps are pushed to other profiles.
+- Warn that switching profiles requires authentication — this is a feature, not a bug, but the user should know about the friction.
+- Warn that some apps (especially banking or authenticator apps) may not work properly in a work profile — test before committing.
+- Warn that disabling the work profile also stops notifications from those apps, which is usually desired but should be intentional.
+- Remind the user that apps in the main profile can still see each other — isolation only protects across the profile boundary.
 
 ## Sources
 
-1. arstechnica.com/security/2025/06/meta-and-yandex-are-de-anonymizing-android-users-web-browsing-identifiers/ (Ars Technica: Meta and Yandex de-anonymizing Android users — tracking code abuses local network ports to link web browsing to app identities, bypassing Android sandboxing)
-2. which.co.uk/news/article/how-much-do-apps-know-about-you-5-ways-to-improve-app-privacy-aJ4p38G3oS1x (Which?: App privacy investigation — 20 apps, 117 tracking companies, 882 permissions, 78 "risky" permissions)
+1. [Ars Technica: Meta and Yandex de-anonymizing Android users](https://arstechnica.com/security/2025/06/meta-and-yandex-are-de-anonymizing-android-users-web-browsing-identifiers/) — Tracking code abuses local network ports to link web browsing to app identities, bypassing Android sandboxing
+2. [Which?: App privacy investigation](https://which.co.uk/news/article/how-much-do-apps-know-about-you-5-ways-to-improve-app-privacy-aJ4p38G3oS1x) — 20 apps, 117 tracking companies, 882 permissions, 78 "risky" permissions
 
 ## Guides
 
-1. ssd.eff.org/module/b5b05223-6609-4aac-b8c4-4dec2c0ea175 (EFF Surveillance Self-Defense: Android privacy and security settings guide)
-2. privacyguides.org/en/android/general-apps/ (PrivacyGuides: Android general apps — Shelter and Private Space recommendations)
-3. source.android.com/docs/security/features/private-space (Android Open Source Project: Private Space technical documentation)
-4. f-droid.org/packages/net.typeblog.shelter/ (Shelter — F-Droid page: FOSS work profile manager)
-5. grapheneos.org/features (GrapheneOS: features overview — user profiles, separate encryption keys, Storage Scopes, Contact Scopes)
+1. [EFF Surveillance Self-Defense: Android privacy and security settings](https://ssd.eff.org/module/b5b05223-6609-4aac-b8c4-4dec2c0ea175) — Comprehensive Android privacy guide
+2. [PrivacyGuides: Android general apps — Shelter and Private Space recommendations](https://privacyguides.org/en/android/general-apps/)
+3. [Android Open Source Project: Private Space technical documentation](https://source.android.com/docs/security/features/private-space)
+4. [Shelter — F-Droid page](https://f-droid.org/packages/net.typeblog.shelter/) — FOSS work profile manager
+5. [GrapheneOS: features overview](https://grapheneos.org/features) — User profiles, separate encryption keys, Storage Scopes, Contact Scopes

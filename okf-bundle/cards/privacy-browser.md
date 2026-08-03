@@ -10,65 +10,73 @@ tags:
   - "tracking"
   - "big-tech-surveillance"
   - "ad-targeting"
-related:
-  - "cards/search-engine.md"
-  - "cards/anonymous-browsing.md"
-  - "cards/dns-blocking.md"
 ---
 
-## Why
+## Context for the Agent
 
-Your browser sees every website you visit, every search you make, every link you click. Chrome is the world's largest surveillance tool — Google uses it to feed the ad-targeting machine that generates 80% of its revenue. When you use Chrome, Google knows your browsing history, search queries, and every interaction with the web. Switching browsers is one of the single highest-impact privacy change you can make. The key threats a private browser addresses: (1) cross-site tracking via cookies and pixels, (2) browser fingerprinting — silently identifying you by your screen size, fonts, plugins, and hardware profile, and (3) engine monoculture — Chromium powers Chrome, Edge, Brave, Vivaldi, and Opera. When one engine dominates, one company (Google) controls web standards. Firefox/Gecko is the only independent engine left.
+This card helps the user switch from Chrome (or another Big Tech browser) to a browser that blocks ads, trackers, and fingerprinting by default. Use it when the user wants to stop cross-site tracking and reclaim their browsing privacy.
 
-## Steps
+## Why This Matters
 
-### General
+Your browser sees every website you visit, every search you make, every link you click. Chrome is the world's largest surveillance tool — Google uses it to feed the ad-targeting machine that generates 80% of its revenue [1]. Chrome has 30+ fingerprinting vectors, 23+ storage/tracking mechanisms, and no native CNAME cloaking protection [2]. Amnesty International has called Chrome "a key tool in expanding these data harvesting practices" [1]. Switching browsers is one of the single highest-impact privacy changes you can make. The key threats a private browser addresses: (1) cross-site tracking via cookies and pixels, (2) browser fingerprinting — silently identifying you by your screen size, fonts, plugins, and hardware profile, and (3) engine monoculture — Chromium powers Chrome, Edge, Brave, Vivaldi, and Opera. Firefox/Gecko is the only independent engine left.
 
-A private browser blocks third-party trackers, resists fingerprinting, and doesn't phone home to an ad company. Choose based on your threat model and how much configuration you're willing to do. All options below are open source and free unless noted.
+## Coaching Flow
 
-<strong>Brave</strong> (MPL-2.0, 21,946★, Chromium) — recommended for most users. Shields block ads, trackers, and fingerprinting scripts out of the box — zero configuration needed. Full uBlock Origin still works (Brave maintains MV2 support, unlike Chrome which killed it in July 2025). The trade-off: Brave ships with crypto features (BAT Rewards, wallet), an AI assistant (Leo), and VPN upsells that most users don't want. All of these are off by default and can be disabled in Settings. Available on Android, iOS, Windows, macOS, and Linux.
+### Step 1: Choose the Right Browser
+Based on the user's onboarding context (platform, skill level, threat concerns), recommend one of these:
 
-<strong>Brave Origin</strong> ($59.99 one-time, free on Linux) — Brave without the bloat. Removes Leo, Rewards, Brave Ads, Wallet, News, Playlist, Talk, VPN, and all upsells — keeping only the core Shields engine. Same privacy protections, no crypto, no AI, no ad network. A one-time purchase that gives you the clean browser Brave should have been from the start.
+- **Brave (recommended for most users):** Blocks ads, trackers, and fingerprinting out of the box — zero configuration needed. It's Chromium-based, so all Chrome extensions work. Full uBlock Origin still works (Brave maintains MV2 support). Mention that it ships with crypto features (BAT Rewards, wallet) and an AI assistant (Leo) — these can be disabled in settings if the user doesn't want them.
+- **LibreWolf (for privacy purists):** A hardened Firefox fork with telemetry compiled out, RFP (Resist Fingerprinting) enabled, and uBlock Origin preinstalled. No account needed, no Pocket, no Mozilla VPN upsells. Trade-off: some websites may break due to strict fingerprinting protection.
+- **Mullvad Browser (for maximum anonymity):** Developed by the Tor Project and Mullvad VPN. Gives every user the same fingerprint so you blend into the crowd. No VPN required — it's about fingerprint uniformity, not IP hiding. Trade-off: it's intentionally inconvenient (no persistent storage, no extensions).
 
-<strong>Mullvad Browser</strong> (MPL-2.0, Gecko ESR, Tor Project + Mullvad VPN) — the strongest anti-fingerprinting browser. Instead of randomizing your fingerprint (which can itself be a tell), it makes all Mullvad Browser users look identical — the one defense the 2025 "Breaking the Shield" research couldn't generically defeat. Zero telemetry, zero accounts, zero sync. uBlock Origin and NoScript pre-installed. Runs in permanent private mode (cookies cleared on close). Desktop only. Best paired with a VPN for IP-level anonymity, but anti-fingerprinting works standalone. Don't add extensions — it makes your fingerprint unique.
+### Step 2: Install and Configure
+Guide the user through installation:
+1. Download from the browser's official website (or F-Droid for mobile)
+2. Set it as the default browser in system settings
+3. For Brave: immediately disable the crypto wallet and Leo AI if the user doesn't want them (Settings → Wallet → Disable, Settings → Leo → Disable)
+4. For any browser: install uBlock Origin in "medium mode" or "hard mode" for maximum tracking protection
+5. Install additional privacy extensions: Privacy Badger (EFF), CanvasBlocker (fingerprinting), and NoScript for advanced users
 
-<strong>Firefox + uBlock Origin</strong> (MPL-2.0, 15,000+★, Gecko) — the only major non-Chromium engine. Out of the box, Firefox trails Brave (telemetry on, Google default search, weak fingerprinting). With 20 minutes of hardening (Strict Enhanced Tracking Protection, privacy.resistFingerprinting enabled, telemetry disabled, uBlock Origin installed), it becomes a top-tier privacy browser with the most customization of any option. Full uBlock Origin support (Firefox committed to MV2 long-term). Best for users who want engine diversity and are willing to configure.
+### Step 3: Migrate from Chrome
+Walk the user through importing bookmarks and passwords from Chrome:
+1. In the new browser: Settings → Import Bookmarks → Select Chrome
+2. Tell them not to import Chrome settings (they carry Chrome's privacy-hostile defaults)
+3. Encourage them to gradually stop using Chrome entirely. After a week, uninstall Chrome if they feel comfortable
 
-<strong>LibreWolf</strong> (MPL-2.0, Codeberg, Gecko ESR) — zero-config hardened Firefox for desktop. Telemetry compiled out (not just toggled off), Pocket removed, DRM disabled, RFP enabled by default, uBlock Origin preinstalled, DNS-over-HTTPS on (Quad9). Full Firefox extension catalog works (unlike Mullvad). No sync, no mobile — significant friction for multi-device users. Tracks Firefox ESR with 1-7 day patch delay. ~5% site breakage from RFP (banking, airline sites) — per-site exceptions handle it.
+### Step 4: Set Up Mobile Browser
+- **Android:** Recommend Brave or Mull (a hardened Firefox fork based on Fennec)
+- **iOS:** Recommend Brave or Firefox Focus. Note: iOS browsers are all Safari WebKit under the hood, so the privacy gains are more limited — but Brave still blocks trackers and ads at the network level
 
-### Android
+### Step 5: Test Your New Setup
+Guide the user to test their browser at **coveryourtracks.eff.org** (EFF's Panopticlick) to see if they are being tracked. They should see a result that says "Your browser has protection against fingerprinting" or "Your browser has strong protection against tracking."
 
-Brave (free, Shields block ads/trackers by default, no config needed). For hardened Firefox on Android, see the desktop tab — there is no good standalone hardened Firefox build for Android at this time.
+## Decision Points
 
-### iOS
+The onboarding already knows the user's platform and skill level. Use that:
+- **Beginner / wants it to just work:** Brave
+- **Intermediate / willing to tweak:** LibreWolf
+- **Advanced / maximum anonymity:** Mullvad Browser
 
-Brave (free, Shields block ads/trackers by default). All iOS browsers use WebKit under the hood — engine choice is moot on iOS. Brave's built-in Shields give it the edge over Safari's weaker tracking protection.
+Ask the user: "Which browser are you coming from?" If Chrome, address the migration concern. If Safari, explain that Safari blocks some trackers but Apple's Private Relay and iCloud keychain are still tied to their Apple ID. If Firefox, they're already on the right engine — suggest LibreWolf for a hardened experience.
 
-## Going Further
+## Pitfalls
 
-<strong>Multi-browser strategy</strong>
-Many privacy-focused users run two browsers: a hardened browser (Mullvad or LibreWolf) for sensitive browsing — banking, health, research — and Brave or Firefox for everyday sites that need logins and extensions. This separates your sensitive identity from your daily browsing.
-
-<strong>Tor Browser</strong>
-If your threat model includes a determined adversary — a government, a stalker, or anyone who can observe your network traffic — use Tor Browser. It routes traffic through three encrypted relays, hiding your IP from both the websites you visit and your ISP. All Tor Browser users share an identical fingerprint. Slower than any option here, and many sites block Tor exits. Use it for specific sensitive sessions, not as a daily driver. See the <a href="/cards/anonymous-browsing">Anonymous Browsing</a> card for full setup.
-
-<strong>Manifest V3 context</strong>
-Google killed full uBlock Origin on Chrome in July 2025 by removing the webRequest API (Manifest V3). uBlock Origin Lite on Chrome is a reduced version — no cosmetic filtering, no scriptlet injection, limited filter lists. Full uBlock Origin still works on Firefox and Brave. This is a structural reason to choose a non-Chrome browser if content blocking matters to you.
+- Chrome extensions that use Manifest V3 (which Chrome now requires) are less effective at blocking. Brave maintains MV2 support, but the user should know this will eventually change.
+- Some websites (especially banking, government, and streaming) break with strict fingerprinting protection. LibreWolf and Mullvad Browser are more likely to break things than Brave. If a site breaks, suggest the user try Brave or a Chromium-based browser for that specific site.
+- "Incognito mode" is not private. It only prevents local history storage — your ISP, employer, and the websites themselves still see everything. Do not let the user confuse incognito with privacy.
+- uBlock Origin in "hard mode" blocks all third-party resources by default. This will break many websites. Coach the user to use "medium mode" (block third-party scripts, allow third-party frames) and only go to "hard mode" if they are technical and willing to do manual whitelisting.
 
 ## Sources
 
-1. amnesty.org/en/latest/news/2025/09/is-court-misses-chance-to-rein-in-google-power/ (Amnesty International: "Chrome has been a key tool in expanding these data harvesting practices" — US court declined to force Google to sell Chrome despite search monopoly ruling)
-2. protonprivacy.substack.com/p/chrome-is-a-surveillance-platform (Proton: "Chrome Is a Surveillance Platform" — 30+ fingerprinting vectors, 23+ storage/tracking mechanisms, no native CNAME cloaking protection, third-party cookies still active with no removal timeline)
-3. decrypt.co/367193/chrome-removes-privacy-claim-gemini-nano-google (Decrypt: Chrome silently downloaded a 4GB AI model to users' devices, then removed the privacy disclosure that promised data would stay on-device)
-4. privacytests.org (PrivacyTests.org: open-source browser privacy comparison — Brave 143/156, Mullvad 141/156)
-5. dl.acm.org/doi/10.1145/3696410.3714713 (Breaking the Shield: Analyzing and Attacking Canvas Fingerprinting Defenses in the Wild — ACM Web Conference 2025, showed randomization can be defeated but uniformity resists)
-6. blog.mozilla.org/en/firefox/firefox-manifest-v3-adblockers/ (Mozilla: Firefox will continue supporting both blocking webRequest and declarativeNetRequest, keeping full uBlock Origin available)
+1. amnesty.org/en/latest/news/2025/09/is-court-misses-chance-to-rein-in-google-power/ — Amnesty International: "Chrome has been a key tool in expanding these data harvesting practices" — US court declined to force Google to sell Chrome despite search monopoly ruling
+2. protonprivacy.substack.com/p/chrome-is-a-surveillance-platform — Proton: "Chrome Is a Surveillance Platform" — 30+ fingerprinting vectors, 23+ storage/tracking mechanisms, no native CNAME cloaking protection
+3. decrypt.co/367193/chrome-removes-privacy-claim-gemini-nano-google — Decrypt: Chrome silently downloaded a 4GB AI model to users' machines without consent
 
 ## Guides
 
-1. brave.com (Brave: open-source Chromium browser with built-in ad/tracker blocking)
-2. mullvad.net/en/browser (Mullvad Browser: Tor Project fingerprinting without Tor network, developed with Mullvad VPN)
-3. librewolf.net (LibreWolf: hardened Firefox with telemetry compiled out, RFP enabled, uBlock Origin preinstalled)
-4. privacyguides.org/en/desktop-browsers/ (PrivacyGuides: desktop browser recommendations with anti-fingerprinting analysis)
-5. themarkup.org/blacklight (The Markup: Blacklight tool — scan websites for Meta Pixel and other trackers)
-6. eylenburg.github.io/browser_comparison.htm (Eylenburg: web browser comparison table — 7 browsers across desktop, Android, and iOS with engine, telemetry, ad-blocking, and privacy feature analysis)
+1. brave.com — Brave: open-source Chromium browser with built-in ad/tracker blocking
+2. mullvad.net/en/browser — Mullvad Browser: Tor Project fingerprinting without Tor network, developed with Mullvad VPN
+3. librewolf.net — LibreWolf: hardened Firefox with telemetry compiled out, RFP enabled, uBlock Origin preinstalled
+4. privacyguides.org/en/desktop-browsers/ — PrivacyGuides: desktop browser recommendations with anti-fingerprinting analysis
+5. themarkup.org/blacklight — The Markup: Blacklight tool — scan websites for Meta Pixel and other trackers
+6. eylenburg.github.io/browser_comparison.htm — Eylenburg: web browser comparison table — 7 browsers across desktop, Android, and iOS with engine, telemetry, ad-blocking, and privacy feature analysis

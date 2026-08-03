@@ -11,55 +11,77 @@ tags:
   - "account-takeover"
 ---
 
-## Why
+## Context for the Agent
 
-If you reuse a password or variations of one, a single breach cascades to every account sharing that password. A password manager breaks the cascade: every account gets a unique, randomly generated password that you never need to remember. The only password you memorize is the master password that encrypts your vault. Even if a service you use gets breached, the stolen password works nowhere else. Cloudflare's 2024 analysis found 41% of successful logins involve leaked credentials, and Verizon's 2025 DBIR found stolen credentials were the entry point in 22% of all breaches — the problem is not theoretical.
+This card helps the user set up a password manager to generate and store unique, strong passwords for every account. Use it when the user is ready to stop reusing passwords and wants to protect against credential-stuffing attacks and data breaches.
 
-## Steps
+## Why This Matters
 
-### General
+If you reuse a password, a single breach cascades to every account sharing that password. Cloudflare's 2024 analysis found 41% of successful logins involve leaked credentials, and Verizon's 2025 DBIR found stolen credentials were the entry point in 22% of all breaches — only 49% of user passwords are distinct [1][2]. A password manager breaks the cascade: every account gets a unique, randomly generated password you never need to remember. The only password you memorize is the master password that encrypts your vault. Even if a service you use gets breached, the stolen password works nowhere else. Passkeys (supported by Bitwarden) are phishing-resistant by design and eliminate the password entirely for compatible services [3].
 
-Install a password manager on every device — browser extension, mobile app, and desktop. Generate a unique 20+ character password for every account. The only password you memorize is your master password — never reuse it anywhere else. Choose Cloud or Self-Hosted below based on where you want your encrypted vault to live.
+## Coaching Flow
 
-## Self-Hosted
+### Step 1: Choose Cloud or Self-Hosted
+Ask the user: "Do you want your encrypted vault stored on Bitwarden's servers (cloud, no maintenance) or on your own server (self-hosted, full control)?" Most users should choose cloud Bitwarden — it's audited, encrypted end-to-end (not even Bitwarden can read your vault), and requires zero maintenance. For technical users who want to self-host, recommend Vaultwarden (described below). If the user wants no server at all, recommend KeePassXC.
 
-<strong>Vaultwarden</strong> (AGPL-3.0, 64,026★) — recommended for experts and technical folks only. Rust reimplementation of the Bitwarden server. Runs on anything from a Raspberry Pi to a VPS. Your encrypted vault never touches a third-party server. Use official Bitwarden clients to connect — the experience is identical to cloud Bitwarden. You are responsible for uptime, backups, TLS certificates, and security updates. If your server goes down, you lose access to every password.
+### Step 2: Install Bitwarden on Every Device
+Guide the user to install Bitwarden everywhere:
+- **Browser extension:** Chrome, Firefox, Brave, Edge — it autofills passwords on login pages
+- **Mobile app:** iOS/Android app from F-Droid or Aurora Store (or official app store)
+- **Desktop app:** from bitwarden.com or package manager
+Walk them through creating an account with a strong email and master password. Emphasize: the master password must be strong, unique, and memorable — write it down on paper and store it somewhere safe. There is no password reset. If you lose it, your vault is gone forever.
 
-Alternatives: KeePassXC (GPL, 27,859★) — fully offline, no server at all. Stores everything in a single encrypted .kdbx file on your machine. No cloud, no account, no company. Sync the file yourself via Syncthing or USB. Mobile: KeePassDX on Android (F-Droid), Strongbox on iOS. Browser: KeePassXC-Browser extension. The most private option — no server to breach, no subscription to cancel. Trade-off: more manual setup and no built-in sync.
+### Step 3: Generate and Replace Passwords
+Guide the user to start generating new passwords for every account. Walk them through:
+1. Use Bitwarden's built-in password generator (20+ characters, uppercase + lowercase + digits + symbols)
+2. For each existing account, log in, go to settings, change password, and let Bitwarden generate and save the new one
+3. Prioritize high-value accounts first: email, banking, social media, cloud storage, domain registrar
+4. Do not rush — this is a gradual process. One or two accounts per day is fine.
 
-## Cloud
+### Step 4: Set Up Two-Factor Authentication (TOTP)
+Ask the user if they want their TOTP (time-based one-time passwords) in the same vault or separate. If they want convenience, Bitwarden Premium ($10/year) stores TOTP codes alongside passwords and auto-fills them. If they want defense-in-depth (an attacker who compromises the vault cannot access 2FA codes), recommend installing **Aegis** (Android) or using a separate authenticator app. Explain that SMS 2FA is vulnerable to SIM swapping — the 2024 SEC Twitter hack was a SIM swap that defeated SMS 2FA [4].
 
-<strong>Bitwarden</strong> (GPL, open source, 13,109★) — recommended for most users. The default choice for ~90% of people. Free tier is genuinely unlimited: unlimited passwords, unlimited devices, unlimited sync. Browser extensions for Firefox, Chrome, Brave, Edge, Safari. Mobile apps with biometric unlock. Audited by Cure53 and ETH Zurich. 8 years without a server breach. Self-hosting a password manager is difficult to do well — if your server goes down, you lose access to every account. Unless you have reliable uptime and a backup strategy, the cloud option is the right call.
+### Step 5: Enable Passkeys
+If the user's accounts support passkeys (Apple, Google, Microsoft, GitHub, PayPal), guide them to enable passkeys in the Bitwarden vault. Passkeys are phishing-resistant by design — they cannot be stolen by a fake login page. They replace passwords entirely for supported services.
 
-Alternatives: Proton Pass (clients open source, Swiss jurisdiction, built-in email aliases — but server is closed and free tier has limits)
+### Step 6: Self-Hosted Option (Vaultwarden — Technical Users Only)
+If the user chose self-hosted, guide them through:
+1. Deploy Vaultwarden on a server they control (Raspberry Pi, VPS, or home server) — official Docker image available
+2. Set up TLS (Let's Encrypt) and a domain name
+3. Use official Bitwarden clients to connect — the experience is identical to cloud Bitwarden
+4. Warn them: they are responsible for uptime, backups, TLS certificates, and security updates. If their server goes down, they lose access to every password.
 
-**Privacy note:** Your encrypted vault is stored on Bitwarden's servers. Zero-knowledge architecture means they cannot read your passwords, but the server is not under your control.
+### Step 7: Fully Offline Option (KeePassXC)
+If the user wants no server at all, recommend KeePassXC. It stores everything in a single encrypted .kdbx file on their machine. They sync the file manually (Syncthing, USB, Nextcloud). No cloud, no server, no network. Trade-off: no autofill on mobile, no seamless sync, and they are responsible for backup discipline.
 
-## Going Further
+## Decision Points
 
-<strong>Emergency Access</strong>
-Bitwarden lets you designate trusted contacts who can request access to your vault in an emergency. If you don't respond within a wait period you choose (e.g. 7 days), they automatically gain access — no shared passwords needed. Set this up under Settings → Emergency Access and add a trusted friend or family member.
+The onboarding already knows the user's skill level. Use that to determine the recommendation:
+- **Beginner:** Cloud Bitwarden, TOTP in Bitwarden
+- **Intermediate:** Cloud Bitwarden, TOTP in Aegis (separate)
+- **Advanced:** Self-hosted Vaultwarden or KeePassXC, TOTP in Aegis
 
-<strong>Layer 2: Passkeys</strong>
-A passkey replaces the password entirely with a cryptographic key pair. The private key never leaves your device, the public key stored on the server is useless to an attacker, and the credential is cryptographically bound to the website it was created for — phishing becomes structurally impossible. The UK's National Cyber Security Centre recommends passkeys wherever services support them, and NIST SP 800-63B classifies them as phishing-resistant (AAL2). Google reports 99.9% lower compromise rates for passkey accounts vs passwords. Enable passkeys wherever a service offers them (Google, GitHub, Amazon, Microsoft, Apple, most major banks). Bitwarden can store and sync passkeys alongside passwords, so no separate app is needed.
+Ask the user: "Do you want convenience (everything in one place) or defense-in-depth (separate 2FA app)?" If they are concerned about a single point of failure, recommend separating TOTP into Aegis.
 
-<strong>Layer 3: TOTP (Authenticator App)</strong>
-For accounts without passkey support, use a TOTP app to generate 6-digit codes. <strong>Bitwarden Authenticator</strong> (included in the $10/year premium tier) stores TOTP codes in the same vault as your passwords — one app, one unlock. Scan the QR code each service provides under Security → 2FA → Authenticator App. Store backup recovery codes in your vault too. Prefer a separate authenticator app like <strong>Aegis</strong> (Android, F-Droid, 12,658★) only if you want TOTP codes isolated from your password vault — the separation means a compromised master password doesn't also expose your 2FA codes.
+## Pitfalls
 
-<strong>SMS-based 2FA</strong>
-SMS 2FA is weaker than passkeys and TOTP — SMS is unencrypted, routed through third-party intermediaries with no security oversight, and vulnerable to SIM swapping. In January 2024, SIM swapping of a single SEC employee's phone number let attackers post from the official @SECGov Twitter account. UK SIM swap fraud rose 1,055% in 2024. That said, SMS 2FA is still better than no 2FA at all — use it if a service offers nothing else, but migrate to passkeys or TOTP the moment they become available.
+- The master password is the single point of failure. There is no password reset. Write it down on paper and store it in a safe place (safety deposit box, fireproof safe). Do not store it in a cloud document, a notes app, or a photo.
+- Browser-based password managers (Chrome's built-in, Firefox Lockwise) are not encrypted the same way and are tied to your browser profile. If someone gains access to your Google account, they have all your passwords. Always use a dedicated password manager.
+- SMS 2FA is vulnerable to SIM swapping. If the user is using SMS 2FA, prioritize moving them to TOTP as soon as possible.
+- Cloud Bitwarden is encrypted end-to-end, but some users may still be uncomfortable with any cloud dependency. Respect that and offer the self-hosted or offline option.
+- Do not try to migrate every password in one sitting. Coach the user to do a few accounts per day — it's a marathon, not a sprint.
 
 ## Sources
 
-1. blog.cloudflare.com/password-reuse-rampant-half-user-logins-compromised (Cloudflare: 41% of successful human logins involve leaked credentials across 30M websites)
-2. verizon.com/business/resources/articles/credential-stuffing-attacks-2025-dbir-research (Verizon 2025 DBIR: stolen credentials = initial access vector in 22% of breaches, only 49% of user passwords are distinct)
-3. ncsc.gov.uk/blogs/passkeys-are-more-secure-than-traditional-ways-to-log-in (NCSC: Passkeys are more secure than traditional ways to log in — phishing-resistant by design)
-4. arstechnica.com/security/2024/10/how-alleged-sim-swap-and-hacked-x-account-drove-up-price-of-bitcoin-by-1k/ (Ars Technica: SIM swap of SEC account — how SMS 2FA was defeated to hack @SECGov)
+1. blog.cloudflare.com/password-reuse-rampant-half-user-logins-compromised — Cloudflare: 41% of successful human logins involve leaked credentials across 30M websites
+2. verizon.com/business/resources/articles/credential-stuffing-attacks-2025-dbir-research — Verizon 2025 DBIR: stolen credentials = initial access vector in 22% of breaches, only 49% of user passwords are distinct
+3. ncsc.gov.uk/blogs/passkeys-are-more-secure-than-traditional-ways-to-log-in — NCSC: Passkeys are more secure than traditional ways to log in — phishing-resistant by design
+4. arstechnica.com/security/2024/10/how-alleged-sim-swap-and-hacked-x-account-drove-up-price-of-bitcoin-by-1k/ — Ars Technica: SIM swap of SEC account — how SMS 2FA was defeated to hack @SECGov
 
 ## Guides
 
-1. ssd.eff.org/module/creating-strong-passwords (EFF Surveillance Self-Defense: creating strong passwords, using password managers, 2FA, and security questions — the complete guide)
-2. github.com/bitwarden/clients (Bitwarden: open-source password manager, audited by Cure53 and ETH Zurich)
-3. github.com/dani-garcia/vaultwarden (Vaultwarden: self-hosted Bitwarden-compatible server in Rust)
-4. github.com/keepassxreboot/keepassxc (KeePassXC: fully offline, local password manager)
-5. github.com/beemdevelopment/Aegis (Aegis: open-source encrypted TOTP authenticator for Android, for users wanting 2FA isolated from password vault)
+1. ssd.eff.org/module/creating-strong-passwords — EFF Surveillance Self-Defense: creating strong passwords, using password managers, 2FA, and security questions — the complete guide
+2. github.com/bitwarden/clients — Bitwarden: open-source password manager, audited by Cure53 and ETH Zurich
+3. github.com/dani-garcia/vaultwarden — Vaultwarden: self-hosted Bitwarden-compatible server in Rust
+4. github.com/keepassxreboot/keepassxc — KeePassXC: fully offline, local password manager
+5. github.com/beemdevelopment/Aegis — Aegis: open-source encrypted TOTP authenticator for Android, for users wanting 2FA isolated from password vault

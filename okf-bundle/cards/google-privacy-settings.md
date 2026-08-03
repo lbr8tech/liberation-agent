@@ -18,25 +18,61 @@ related:
   - "cards/privacy-video-client.md"
 ---
 
-## Why
+## Context for the Agent
 
-Google is the world's largest surveillance company. It pioneered surveillance capitalism — extracting human behavioral data as free raw material, computing it into prediction products, and selling those predictions to anyone willing to pay. Every search, email, YouTube watch, Maps destination, and Chrome keystroke feeds this machine. Google's own Gemini privacy page admits connected app data is used to train AI models "for everyone." When Google scrapped its plan to remove third-party cookies from Chrome, it confirmed that surveillance is the product, not a side effect. Even with every setting locked down, Chrome still sends address-bar keystrokes to Google unsigned, and Google Analytics tracks you on over half the web. The goal is harm reduction.
+This card is about locking down Google account settings to minimize tracking across Google's services. Use it when the user wants to reduce Google's data collection while they still use Google services, or as a step before migrating away.
 
-## Steps
+## Why This Matters
 
-### General
+Google is the world's largest surveillance company. It pioneered surveillance capitalism — extracting human behavioral data as free raw material and selling predictions to anyone willing to pay [1]. Every search, email, YouTube watch, Maps destination, and Chrome keystroke feeds this machine. When Google scrapped its plan to remove third-party cookies from Chrome, it confirmed that surveillance is the product, not a side effect. A leaked internal database revealed thousands of self-reported privacy incidents [2]. Even with every setting locked down, Chrome still sends address-bar keystrokes to Google unsigned, and Google Analytics tracks you on over half the web. The goal is harm reduction.
 
-Google logged 24,000 interactions per month even for a privacy-conscious user. Lock down your account settings before migrating away, or while still using Google services:
+## Coaching Flow
 
-1. Chrome: Turn off "Allow Chrome sign-in," "Improve search suggestions," "Make searches and browsing better"
-2. Search: Turn off "Personal results" and "Activity controls" → Web & App Activity, Location History, YouTube History
-3. Gmail: Turn off "Smart features in Gmail, Chat, and Meet" and "Google Workspace smart features." Enable "Ask before displaying external images" (blocks tracking pixels)
-4. Maps: Turn off "Timeline" (formerly Location History). On phone, revoke Location permission for all Google apps
-5. YouTube: Turn off "Pause watch history" and "pause search history." Use signed-out or via alternative client (see privacy-video-client card)
-6. Google Takeout: Export your data before changing settings — some data is deleted when you turn off activity controls
-7. AI: Do not connect your apps to Gemini. If already connected, disconnect — connected data is used to train AI models "for everyone"
+### Step 1: Export data first
+Tell the user to go to takeout.google.com and export their data BEFORE changing any settings. Some data (like location history, web & app activity) is deleted when the corresponding activity control is turned off. Exporting first ensures they don't lose anything they might want later.
 
-These settings reduce Google's collection but don't stop it entirely. Chrome sends address-bar keystrokes to Google even unsigned. Google Analytics tracks you on 50%+ of websites. The goal is harm reduction until you can fully migrate.
+### Step 2: Lock down activity controls
+Guide the user to myaccount.google.com → Data & privacy → History settings. Walk through each:
+1. **Web & App Activity**: Turn off. This stops Google from saving searches, Chrome activity, and activity from apps. If they use Google services daily, this is the biggest single change.
+2. **Location History**: Turn off. This stops Google from building a Timeline of everywhere they've been. Tell them that Google Maps still works for navigation without it.
+3. **YouTube History**: Turn off both watch history and search history. Without this, YouTube recommendations will be generic, but that's a feature, not a bug.
+4. **Voice & Audio Activity**: Turn off. This stops Google from saving recordings of voice commands and audio interactions.
+
+### Step 3: Turn off ad personalization
+Guide them to myaccount.google.com → Data & privacy → Ad settings. Turn off "Ad personalization." This doesn't stop ads — it stops Google from using their data to target them. They'll still see ads, but they'll be generic and irrelevant.
+
+### Step 4: Lock down Chrome
+If the user uses Chrome, guide them to Chrome settings → You and Google → Sync and Google services. Turn off:
+- "Allow Chrome sign-in" (if they don't need sync)
+- "Improve search suggestions"
+- "Make searches and browsing better"
+- "Send URLs of pages visited to Google"
+Tell them these settings send every keystroke and URL to Google. Even unsigned, Chrome sends address-bar keystrokes to Google.
+
+### Step 5: Disconnect AI/Gemini
+Guide them to myaccount.google.com → Data & privacy → Gemini and connected apps. Disconnect any connected apps. Google's Gemini privacy page admits that connected app data is used to train AI models "for everyone." If they haven't connected anything, tell them not to.
+
+### Step 6: Gmail privacy settings
+If the user uses Gmail, guide them to Gmail settings → See all settings → General. Turn off:
+- "Smart features in Gmail, Chat, and Meet"
+- "Google Workspace smart features"
+- Enable "Ask before displaying external images" — this blocks tracking pixels in emails
+
+### Step 7: YouTube privacy
+If the user uses YouTube, guide them to youtube.com → Settings → Privacy. Turn off "Pause watch history" and "Pause search history." Suggest they use YouTube signed out, via an alternative client (see privacy-video-client card), or via a privacy-focused frontend like Invidious or Piped.
+
+## Decision Points
+
+The agent knows the user's platform from onboarding. However, ask the user: **"Do you still use Google services regularly, or are you planning to migrate away?"** If they're staying, these settings are harm reduction. If they're migrating, point them to the related cards: email-migration, search-engine, privacy-browser, maps-privacy, and privacy-video-client.
+
+## Pitfalls
+
+- **Settings don't stick** — Google periodically resets or changes settings. Set a reminder to check every 3-6 months.
+- **Google Analytics is everywhere** — Even with a locked-down account, Google Analytics tracks the user on over 50% of websites. A privacy browser with uBlock Origin and fingerprinting protection is the only client-side defense.
+- **Chrome is inherently tracking** — Chrome sends address-bar keystrokes to Google even when signed out and even with all settings off. The only real fix is switching to a privacy-focused browser.
+- **Android phones phone home** — Locking down the Google account does not stop the Android OS from sending telemetry. See the "Android Debloat" card for phase 1.
+- **Takeout before lockdown** — Remind the user to export their data before turning off activity controls. Google deletes historical data when you turn off the corresponding control.
+- **Google's privacy policy is the floor, not the ceiling** — Even with everything turned off, Google still collects data. The only way to stop it completely is to stop using Google services entirely.
 
 ## Sources
 

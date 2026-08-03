@@ -10,83 +10,73 @@ tags:
   - "tracking"
   - "ad-targeting"
   - "digital-minimalism"
-related:
-  - "cards/privacy-browser.md"
-  - "cards/search-engine.md"
-  - "cards/phone-degoogling.md"
-  - "cards/digital-minimalism.md"
 ---
 
-## Why
+## Context for the Agent
 
-YouTube's recommendation algorithm — optimized for watch time, because more watching means more ad revenue — drives 70% of all watch time on the platform. The content that keeps people watching longest tends toward the sensational and the extreme.
+This card helps the user watch YouTube videos without ads, tracking, or an account, using privacy-focused alternative clients. Use it when the user wants to escape YouTube's recommendation algorithm and Google's tracking infrastructure.
 
-Zeynep Tufekci called it "one of the most powerful radicalizing instruments of the 21st century" (NYT, 2018). Former YouTube engineer Guillaume Chaslot confirmed the algorithm was explicitly optimized for watch time. Max Fisher's The Chaos Machine (2022) traced the link between algorithmic amplification and real-world ethnic violence in Myanmar, Sri Lanka, and India. A 2026 study found 27 of 33 members of a UK far-right group cited YouTube as their key radicalization pathway — autoplay pushed them from mainstream conservatism to neo-Nazi propaganda.
+## Why This Matters
 
-The app itself is a tracking instrument: watch history, search history, location, device identifiers — all fed into Google's ad infrastructure. Even unsigned in, Google collects device-level data.
+YouTube's recommendation algorithm — optimized for watch time, because more watching means more ad revenue — drives 70% of all watch time on the platform. Zeynep Tufekci called it "one of the most powerful radicalizing instruments of the 21st century" [1]. A 2026 study found 27 of 33 members of a UK far-right group cited YouTube as their key radicalization pathway — autoplay pushed them from mainstream conservatism to neo-Nazi propaganda [2]. Max Fisher's *The Chaos Machine* traced the link between algorithmic amplification and real-world ethnic violence in Myanmar, Sri Lanka, and India [3]. The app itself is a tracking instrument: watch history, search history, location, device identifiers — all fed into Google's ad infrastructure. Even when signed out, Google collects device-level data. Privacy-focused clients break this entirely: no algorithm, no tracking, no ads, and no account needed.
 
-## Steps
+## Coaching Flow
 
-### General
+### Step 1: Choose the Right Client
+Based on the user's platform and needs, recommend one:
 
-**Suggested protocol:** use NewPipe (Android) or FreeTube (desktop) as your daily driver. Both are FOSS, store everything locally, and need no account. For maximum privacy (hiding your IP from YouTube), use LibreTube with a healthy Piped instance, or self-host Invidious on a VPS. Keep ReVanced as an option if you need the official YouTube experience with login — but understand the ToS risk.
+- **NewPipe (Android, recommended):** FOSS YouTube client with no Google services. Features: background playback, audio-only mode, downloads, and support for PeerTube/SoundCloud/Bandcamp. No account needed, no ads, no tracking. Subscriptions and history are stored locally on the device.
+- **FreeTube (desktop - Windows/macOS/Linux):** FOSS desktop YouTube client. Local subscriptions, history, and playlists. SponsorBlock support built in. Available on Flathub.
+- **LibreTube (Android, advanced):** Routes through Piped instances for IP privacy. Material You UI. SponsorBlock built in. More privacy than NewPipe (your IP never reaches YouTube), but depends on public Piped instances being maintained.
+- **Invidious (any platform, via browser):** Self-hostable web frontend for YouTube. Public instances available with Tor/I2P support. No JavaScript required. Video proxying optional. Works in any browser.
 
-**What you give up:** comment posting, liking, YouTube Music integration, live chat, and the recommendation algorithm itself (which is the point — you'll use search and subscriptions instead of being fed content). When YouTube changes its interface, third-party clients may break for a day or two until updates ship. Keep a backup client installed.
+### Step 2: Install and Configure
+Guide the user through installation:
+1. **NewPipe:** Install from F-Droid. After opening, show them how to search for a channel, subscribe, and download a video. Explain that background playback works even with the screen off.
+2. **FreeTube:** Install from flathub.org or the website. Show them how to import subscriptions from YouTube (export as OPML from Google Takeout, import into FreeTube).
+3. **LibreTube:** Install from F-Droid. Show them how to select a Piped instance (direct them to piped.video or a community-maintained instance).
+4. **Invidious:** Guide technical users through deploying via Docker, or point them to a public instance list at invidious.io.
 
-**SponsorBlock** is worth enabling in any client that supports it. It crowdsources timestamps for sponsored segments, intros, outros, and "subscribe reminders" — skipping them saves time and reduces the engagement signals you send back to YouTube's algorithm.
+### Step 3: Import Subscriptions (Optional)
+If the user has existing YouTube subscriptions, guide them to:
+1. Export subscriptions from YouTube via Google Takeout (takeout.google.com) — select only "Subscriptions" data
+2. Import the OPML/CSV file into NewPipe or FreeTube
+3. Explain that this is a one-time migration — going forward, subscriptions are managed locally
 
-### Android
+### Step 4: Set Up SponsorBlock (Optional)
+Guide the user to enable SponsorBlock in NewPipe (settings → SponsorBlock) or FreeTube (settings → SponsorBlock). This automatically skips sponsored segments, intros, outros, and self-promotion in videos. It is community-sourced and open source.
 
-**NewPipe** (F-Droid) — the best choice for most people. Free, open-source, no Google Play Services, no account, no tracking. Background playback, downloads (video and audio), local subscriptions, picture-in-picture. Also supports PeerTube, SoundCloud, Bandcamp, and media.ccc.de. Most reliable FOSS client — when YouTube changes its interface, NewPipe usually ships a fix within days. 34,000★ on GitHub.
+### Step 5: Alternative: ReVanced (If They Need the Official App)
+If the user insists on the official YouTube app experience (e.g., for casting to TV, live chat, or comments), recommend **ReVanced** — the community successor to YouTube Vanced. Explain the trade-offs: it patches the official app on-device, requires microG for login, and carries ToS risk. Guide them to revanced.app for the patcher.
 
-**LibreTube** (F-Droid) — the privacy-maximizing option. Routes every request through a Piped instance (community-run proxy), so your IP address never reaches YouTube's servers directly. Modern Material You interface, SponsorBlock and Return YouTube Dislike built in. Less reliable than NewPipe — depends on the health of your chosen Piped instance, and buffering is more common. Best used with a backup instance.
+## Decision Points
 
-**Grayjay** (grayjay.app) — the multi-platform option. By FUTO (Louis Rossmann's organization). Aggregates YouTube, Twitch, Rumble, Odysee, PeerTube, Nebula, SoundCloud, and Patreon into one subscription feed. Plugin-based architecture — update the plugin, not the whole app, when a platform changes its API. Source-available (not FOSS, custom non-commercial license), so not on F-Droid. Best if you follow creators across multiple platforms. Import your YouTube subscriptions via CSV.
+Ask the user: "Do you need to watch YouTube on your phone, desktop, or both?" NewPipe is Android-only, FreeTube is desktop-only, LibreTube is Android-only, and Invidious works in any browser. If they need both, recommend NewPipe (phone) + FreeTube (desktop).
 
-**ReVanced** (revanced.app) — the Vanced successor, still actively maintained as of June 2026 (Manager v2). Patches the official YouTube app on your device — ad blocking, SponsorBlock, Return YouTube Dislike, background play. Requires microG for account login (lets you sync subscriptions). Most similar to the Vanced experience. Technical setup (supply your own YouTube APK, apply patches via ReVanced Manager). Violates YouTube's Terms of Service — low but non-zero risk of account action. Best if you want the official YouTube UI with ad blocking.
+Ask the user: "Do you use YouTube's algorithm to discover new content?" If yes, explain that these clients have no recommendation algorithm — you search for content intentionally. This is a feature, not a bug. If they want discovery, suggest using Invidious with public instances (which may have basic recommendations) or subscribing to curated channels.
 
-### iOS
+## Pitfalls
 
-No great FOSS option exists. **Brave browser** with Shields up is the best fallback — blocks YouTube ads and trackers in the browser. **YouTube Plus** (github.com/dayanch96/YTLite, 5,000★) is the successor to uYouPlus — a modded iOS app with ad blocking, SponsorBlock, downloads, PiP, and 100+ customizable options. Sideload via AltStore or TrollStore. Note: starting v5.2 it requires a subscription; the last free version is 5.2b4. Carries the same ToS risks as ReVanced. For maximum privacy, use a private Invidious instance in Safari.
-
-### Desktop
-
-**FreeTube** (freetubeapp.io) — FOSS desktop client for Windows, macOS, and Linux (Flathub). Uses a built-in local extractor (YouTube.js) with Invidious API as fallback. Subscriptions, history, and playlists stored locally on your device. SponsorBlock integration optional. Blocks all YouTube ads by default. The best desktop option for most people.
-
-## Self-Hosted
-
-<strong>Invidious</strong> (AGPL-3.0) — self-hostable web frontend for YouTube. Dozens of public instances exist, some with Tor onion and I2P support, but self-hosting gives you full control. No JavaScript required (works in Tor Browser at Safest level). Does not proxy video streams by default — videos still connect to googlevideo.com unless you enable proxying in instance settings. Single Docker container, easy to deploy on a $5/month VPS. Best for anonymity: only you see the viewing logs.
-
-Alternatives: <strong>Piped</strong> (AGPL-3.0) — self-hostable web frontend, more complex than Invidious (multiple services). Requires JavaScript. SponsorBlock built in without needing a browser extension. Same caveat: doesn't provide privacy by itself — use a VPN or Tor if your threat model requires hiding your IP. Federated multi-instance architecture. github.com/TeamPiped/Piped
-
-## Going Further
-
-**Self-host your own frontend**
-Public Invidious and Piped instances are fragile — they go down, get rate-limited by YouTube, or disappear when the operator loses interest. Self-hosting on a $5/month VPS gives you a stable, private instance where only you see the viewing logs. Invidious is a single Docker container; Piped is more complex (multiple services). See invidious.io and the Piped documentation for setup guides. Use a domain name and HTTPS — a bare-IP instance is visible to your ISP and anyone scanning the VPS.
-
-**Break the recommendation loop**
-The YouTube recommendation algorithm works by watching what you watch. Third-party clients already break this loop because they don't feed your watch history back to Google. But you can go further: use search and subscriptions intentionally, not the home feed. Subscribe to channels you actually want to follow (via local subscriptions in NewPipe/FreeTube) rather than browsing what the algorithm serves you. If you find yourself autoplay-rabbit-holing, disable autoplay entirely in your client settings.
-
-**Support creators directly**
-YouTube's Partner Program pays creators based on views and ad revenue, which the recommendation algorithm controls. This creates a feedback loop where creators are incentivized to produce content optimized for engagement — increasingly sensational, divisive, or extreme material. If you want to support creators without feeding that system, use direct support platforms: Patreon, Liberapay, Ko-fi, or the creator's own website. Grayjay has built-in direct creator support features.
-
-**Clear your YouTube watch history**
-If you still use YouTube occasionally (even in a browser), your watch history feeds the recommendation algorithm and your ad profile. Go to myactivity.google.com → YouTube History → pause it and delete existing history. Also pause YouTube Search History on the same page. This won't affect your ability to watch videos — it just stops Google from building a profile of your viewing habits.
+- YouTube periodically changes its API, which can break NewPipe, LibreTube, and Invidious. The developers usually fix these breakages within days, but there may be brief outages. The user should check for updates when something stops working.
+- ReVanced requires patching the official YouTube APK on-device. This is a technical process and carries a theoretical ToS risk (Google has not enforced against ReVanced users, but it could). MicroG is required for login.
+- Grayjay (FUTO) is a multi-platform video aggregator that supports YouTube, Twitch, Rumble, Odysee, PeerTube, and Nebula. It is newer and less battle-tested than NewPipe. Only recommend it if the user wants a single app for multiple platforms.
+- Background playback (NewPipe, FreeTube) uses more battery. The user should be aware of this.
+- Importing subscriptions from Google Takeout is a one-time process. If the user subscribes to a new channel later, they need to add it manually in the client.
 
 ## Sources
 
-1. nytimes.com/2018/03/10/opinion/sunday/youtube-politics-radical.html (New York Times: Zeynep Tufekci — "YouTube, the Great Radicalizer" — the seminal 2018 essay documenting how the recommendation algorithm consistently pushed users toward progressively more extreme content; "one of the most powerful radicalizing instruments of the 21st century")
-2. bylinetimes.com/2026/01/27/how-youtubes-algorithm-pushed-people-into-neo-nazism/ (Byline Times: study of Patriotic Alternative published in Studies in Conflict & Terrorism — 27 of 33 far-right activists cited YouTube as key radicalization tool, autoplay pushed them from Ben Shapiro to neo-Nazi propaganda)
-3. npr.org/2022/09/06/1121343898/social-media-can-inflame-your-emotions-and-its-a-byproduct-of-its-design (NPR: Max Fisher interview on The Chaos Machine — NYT investigative reporter on how YouTube and Facebook algorithms amplify outrage to maximize engagement, tracing the link to ethnic violence in Myanmar and Sri Lanka)
-4. mozillafoundation.org/en/blog/congratulations-youtube-now-show-your-work/ (Mozilla Foundation: calls out YouTube's lack of transparency on recommendation algorithm changes — "still a glaring absence of publicly verifiable data that supports YouTube's claims that they are fixing the problem")
+1. nytimes.com/2018/03/10/opinion/sunday/youtube-politics-radical.html — New York Times: Zeynep Tufekci — "YouTube, the Great Radicalizer" — the seminal 2018 essay documenting how the recommendation algorithm consistently pushed users toward progressively more extreme content
+2. bylinetimes.com/2026/01/27/how-youtubes-algorithm-pushed-people-into-neo-nazism/ — Byline Times: study of Patriotic Alternative published in Studies in Conflict & Terrorism — 27 of 33 far-right activists cited YouTube as key radicalization tool
+3. npr.org/2022/09/06/1121343898/social-media-can-inflame-your-emotions-and-its-a-byproduct-of-its-design — NPR: Max Fisher interview on The Chaos Machine — how YouTube and Facebook algorithms amplify outrage to maximize engagement
+4. mozillafoundation.org/en/blog/congratulations-youtube-now-show-your-work/ — Mozilla Foundation: calls out YouTube's claims that they are fixing the problem
 
 ## Guides
 
-1. privacyguides.org/en/frontends/ (PrivacyGuides: YouTube frontends — recommends Invidious, Piped, FreeTube, LibreTube, NewPipe; criteria: must be open-source, self-hostable, provide anonymous functionality; note on YouTube API changes causing reliability issues)
-2. newpipe.net (NewPipe: FOSS Android YouTube client — 34,000★, no Google services, background playback, downloads, also supports PeerTube/SoundCloud/Bandcamp)
-3. libretube.dev (LibreTube: open-source Android YouTube client — routes through Piped instances, Material You UI, SponsorBlock built in)
-4. freetubeapp.io (FreeTube: FOSS desktop YouTube client for Windows/macOS/Linux — local subscriptions, history, playlists, SponsorBlock optional, available on Flathub)
-5. invidious.io (Invidious: self-hostable web frontend for YouTube — public instances with Tor/I2P support, no JavaScript required, video proxying optional)
-6. grayjay.app (Grayjay: multi-platform video aggregator by FUTO — YouTube, Twitch, Rumble, Odysee, PeerTube, Nebula in one app, plugin-based)
-7. revanced.app (ReVanced: community successor to YouTube Vanced — patches official app on-device, actively maintained June 2026, requires microG for login)
-8. eylenburg.github.io/browser_comparison.htm (Eylenburg: browser comparison — includes ad-blocking capabilities relevant to browser-based YouTube viewing)
+1. privacyguides.org/en/frontends/ — PrivacyGuides: YouTube frontends — recommends Invidious, Piped, FreeTube, LibreTube, NewPipe
+2. newpipe.net — NewPipe: FOSS Android YouTube client — no Google services, background playback, downloads, also supports PeerTube/SoundCloud/Bandcamp
+3. libretube.dev — LibreTube: open-source Android YouTube client — routes through Piped instances, Material You UI, SponsorBlock built in
+4. freetubeapp.io — FreeTube: FOSS desktop YouTube client for Windows/macOS/Linux — local subscriptions, history, playlists, SponsorBlock optional
+5. invidious.io — Invidious: self-hostable web frontend for YouTube — public instances with Tor/I2P support, no JavaScript required
+6. grayjay.app — Grayjay: multi-platform video aggregator by FUTO — YouTube, Twitch, Rumble, Odysee, PeerTube, Nebula in one app
+7. revanced.app — ReVanced: community successor to YouTube Vanced — patches official app on-device, requires microG for login
+8. eylenburg.github.io/browser_comparison.htm — Eylenburg: browser comparison — includes ad-blocking capabilities relevant to browser-based YouTube viewing

@@ -17,50 +17,54 @@ related:
   - "cards/loyalty-program-audit.md"
 ---
 
-## Why
+## Context for the Agent
 
-Data brokers collect, package, and sell your personal information — name, address, phone, relatives, location history — to anyone willing to pay, including advertisers, insurers, law enforcement, and stalkers. EFF identified 750 registered data brokers operating across US state registries, and found that 43% of California-registered brokers ignore legally-mandated access requests entirely (EFF, 2025).
+This card is for users who want to remove their personal information from data broker databases and people-search sites. Use it when the user expresses concern about their personal data being sold, or after completing the digital footprint audit.
 
-No service can permanently delete you. Brokers continually re-scrape public records, so removal is ongoing maintenance, not a one-time fix. Start with the free options — they cover most of what paid services do.
+## Why This Matters
 
-## Steps
+Data brokers collect, package, and sell your personal information — name, address, phone, relatives, location history — to anyone willing to pay, including advertisers, insurers, law enforcement, and stalkers. The EFF identified 750 registered data brokers operating across US state registries, and found that 43% of California-registered brokers ignore legally-mandated access requests entirely [1][2]. No service can permanently delete you — brokers continually re-scrape public records, so removal is ongoing maintenance, not a one-time fix [3].
 
-### General
+## Coaching Flow
 
-**Step 1: California DROP (free, if eligible)**
-If you're a California resident, use the state's Delete Request and Opt-Out Platform (DROP). One request forces all registered data brokers to delete your data. Launched January 2026 under the Delete Act. This is the closest thing to a one-click opt-out and it costs nothing.
+### Step 1: Check if the user is a California resident
+If the user is a **California resident**, start with **California DROP** (Delete Request and Opt-Out Platform) — the free government-backed deletion platform launched January 2026 under the Delete Act [4]. One request forces all registered data brokers to delete your data. This is the closest thing to a one-click opt-out and costs nothing.
 
-**Step 2: Manual opt-outs (free, everyone)**
-The major people-search sites all publish opt-out forms. The Big Ass Data Broker Opt-Out List (BADBOOL) is a community-maintained directory of direct opt-out links for every major broker, organized by priority. It's free, actively maintained, and reaches the same sites a paid service would. Re-check every few months since brokers repopulate.
+### Step 2: Manual opt-outs (everyone)
+For everyone else (or as a supplement to DROP), guide the user to the **Big Ass Data Broker Opt-Out List** (BADBOOL) [6]. This is a community-maintained directory of direct opt-out links for every major broker, organized by priority. It's free, actively maintained, and reaches the same sites a paid service would.
 
-**Step 3: EasyOptOuts ($20/year, optional automation)**
-If manual opt-out is too time-consuming, EasyOptOuts is the PrivacyGuides-recommended paid option. At $20/year it's a fraction of what DeleteMe ($129) or Incogni ($99) charge. Independently tested by both PrivacyGuides and Consumer Reports. Re-runs every 4 months automatically.
+Walk the user through:
+1. Start with the highest-priority brokers (people-search sites like Spokeo, Whitepages, BeenVerified, Intelius, MyLife)
+2. Each broker's opt-out page is linked directly in BADBOOL
+3. Set a recurring reminder to re-check every 3-6 months since brokers repopulate from public records
 
-**Avoid:** Services that promise "complete" or "permanent" removal (no one can deliver this), request your Social Security number, or make cancellation difficult.
+### Step 3: Optional automation (EasyOptOuts)
+If the user finds manual opt-out too time-consuming, recommend **EasyOptOuts** — the PrivacyGuides-recommended paid service at ~$20/year [5]. It's affordable and covers the same ground as the manual approach. But start with free first — most users can cover the major brokers manually in under an hour.
 
-## Going Further
+### Step 4: Also cover telemarketing and credit opt-outs
+If the user is getting spam calls or credit offers, guide them to the Griffin Boyce data broker opt-out list [7] which covers telemarketing, direct mail, and credit offer opt-outs.
 
-**Why not DeleteMe or Incogni?**
-Both are legitimate services, but PrivacyGuides doesn't recommend either as a top pick. DeleteMe costs $129/year (6x EasyOptOuts) with comparable coverage. Incogni is operated by Surfshark (a VPN company) and costs $99/year. If you want maximum coverage and don't mind the cost, either works as a supplement to manual opt-outs — but they're not the best value.
+## Decision Points
 
-**A note on these recommendations**
-We haven't independently vetted any of these services. We're trusting PrivacyGuides' testing and Consumer Reports' findings, because they have the resources to do that work. It's also worth saying plainly: it sucks that privacy from data brokers costs money at all. Your data is collected without consent, sold without your knowledge, and then you're asked to pay to get it back. The free options (DROP, BADBOOL, manual opt-outs) should be the default, and the structural fix is legislation — not a subscription.
+Ask the user: **Are you a California resident?** If yes, use DROP as the primary method. Otherwise, BADBOOL manual opt-outs are the way to go. If they're short on time, offer EasyOptOuts as a paid alternative.
 
-**The structural problem**
-Data broker regulation is patchwork. Only California, Texas, Oregon, and Vermont require broker registration. EFF found hundreds of brokers registered in one state but not others, and an unknown number registered nowhere at all. Federal legislation is needed. Support EFF and Privacy Rights Clearinghouse's advocacy efforts.
+## Pitfalls
 
-**Your data will come back**
-Every time you use a loyalty card, register a vehicle, file for divorce, or sign up for an app, new data enters the broker ecosystem. Opt-out is not permanent — it's a recurring practice, like weeding a garden.
+- Warn the user that this is **ongoing maintenance**, not a one-time fix. Brokers continuously re-scrape public records. Set a 3-6 month reminder to re-check.
+- Warn that DROP only works for California residents — don't confuse it with a universal solution.
+- Warn that some broker opt-out pages are intentionally hard to find or require email verification. The BADBOOL list includes specific instructions for each.
+- Remind the user that opting out doesn't delete government records (voter registration, property records) — those are public by law and can only be restricted, not removed.
 
 ## Sources
 
-1. eff.org/deeplinks/2025/06/why-are-hundreds-data-brokers-not-registering-states (EFF: 750 data brokers identified across state registries, hundreds failing to register — analysis with Privacy Rights Clearinghouse)
-2. eff.org/deeplinks/2025/08/data-brokers-are-ignoring-privacy-law-we-deserve-better (EFF: 43% of California data brokers ignore legally-mandated access requests — UC Irvine research)
+1. [EFF: 750 data brokers identified across state registries, hundreds failing to register](https://eff.org/deeplinks/2025/06/why-are-hundreds-data-brokers-not-registering-states) — Analysis with Privacy Rights Clearinghouse
+2. [EFF: 43% of California data brokers ignore legally-mandated access requests](https://eff.org/deeplinks/2025/08/data-brokers-are-ignoring-privacy-law-we-deserve-better) — UC Irvine research
+3. [EFF: Behind the One-Way Mirror](https://eff.org/wp/behind-the-one-way-mirror) — Deep dive into corporate surveillance technology, data brokers, real-time bidding, and how trackers link data to people
 
 ## Guides
 
-1. privacyguides.org/en/data-broker-removals/ (PrivacyGuides: Data Removal Services — manual opt-out links, EasyOptOuts recommendation, vetting criteria)
-2. github.com/yaelwrites/Big-Ass-Data-Broker-Opt-Out-List (BADBOOL: community-maintained directory of direct opt-out links for every major data broker — free, organized by priority)
-3. github.com/glamrock/data-brokers (Griffin Boyce's data broker opt-out list — telemarketing, direct mail, and credit offer opt-outs)
-4. oag.ca.gov/privacy/drop (California DROP: free government-backed deletion request platform)
-5. privacyrights.org/data-broker-registry (Privacy Rights Clearinghouse: searchable data broker registry across all state registries)
+1. [PrivacyGuides: Data Removal Services](https://privacyguides.org/en/data-broker-removals/) — Manual opt-out links, EasyOptOuts recommendation, vetting criteria
+2. [BADBOOL: Big Ass Data Broker Opt-Out List](https://github.com/yaelwrites/Big-Ass-Data-Broker-Opt-Out-List) — Community-maintained directory of direct opt-out links for every major data broker, free, organized by priority
+3. [Griffin Boyce: data broker opt-out list](https://github.com/glamrock/data-brokers) — Telemarketing, direct mail, and credit offer opt-outs
+4. [California DROP: free government-backed deletion request platform](https://oag.ca.gov/privacy/drop)
+5. [Privacy Rights Clearinghouse: data broker registry](https://privacyrights.org/data-broker-registry) — Searchable data broker registry across all state registries

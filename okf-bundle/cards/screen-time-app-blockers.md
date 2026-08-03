@@ -9,54 +9,52 @@ tags:
   - "p1"
   - "digital-minimalism"
   - "ad-targeting"
-related:
-  - "cards/minimal-launcher.md"
-  - "cards/notification-audit.md"
 ---
 
-## Why
+## Context for the Agent
 
-Your phone's interface is not designed for you. Every default — the infinite scroll, the autoplay, the pull-to-refresh, the red notification badges, the "you might also like" queue — is an engagement-prolonging design pattern engineered to maximize time-on-platform. Researchers identified 63 such patterns across the 17 largest online platforms, with social media apps using twice as many as any other category. Johann Hari, in Stolen Focus, argues that our attention did not collapse — it was stolen. Tristan Harris, a former Google design ethicist, blew the whistle on how the attention economy works: every second you spend scrolling is revenue, and every second you put the phone down, revenue stops. Some of the cleverest engineers in the world are paid to keep you hooked. App blockers and screen-time tools fight back by inserting friction — delays, schedules, grayscale, and hard limits — between you and the patterns designed to exploit your attention. You do not need to quit your phone. You need to change the defaults.
+This card helps the user reclaim their attention by installing app and website blockers that break addictive engagement patterns. Use it when the user wants to stop compulsive checking, doomscrolling, or social media addiction.
 
-## Steps
+## Why This Matters
 
-### Android
+Your phone's interface is engineered to keep you hooked. Researchers identified 63 engagement-maximizing patterns across the 17 largest online platforms, with social media apps using twice as many as any other category [1]. Johann Hari, in *Stolen Focus*, argues that our attention did not collapse — it was stolen by companies whose revenue depends on every second you spend scrolling [2]. App blockers and screen-time tools fight back by inserting friction — delays, schedules, grayscale, and hard limits — between you and the patterns designed to exploit your attention. You do not need to quit your phone. You need to change the defaults.
 
-<strong>Curbox</strong> (F-Droid, GPL-3.0, 1,079★) — the strongest FOSS app blocker:
-1. Install from F-Droid. No internet permission — it physically cannot transmit your data
-2. Block apps and websites completely, or use granular UI hiding to block just the addictive parts (e.g., hide the YouTube home feed but keep search, hide Instagram explore but keep DMs)
-3. Short-form content blocker: specifically targets Instagram Reels and YouTube Shorts
-4. App-specific grayscale: drain color from Instagram while keeping Camera in full color
-5. Scheduled DND, usage-based limits (block WhatsApp after 1 hour), time-based access (allow only 7 AM–9 PM)
-6. Unlock methods: strict blockade, timed unlocks, QR/barcode scan (forces you to get up), or sentence retyping
-7. Tamper protection makes it hard to uninstall in moments of weakness
+## Coaching Flow
 
-### iOS
+### Step 1: Assess the User's Platforms and Pain Points
+Ask the user: "Which apps or websites eat the most of your attention?" Common answers: Instagram, TikTok, YouTube, Twitter/X, Reddit, news sites, games. Also ask which device they use most — Android, iOS, desktop, or all three. Based on their answer, recommend the right tool(s) below.
 
-<strong>ScreenZen</strong> (free, donation-supported, no subscription) — delay-based: inserts a pause screen before flagged apps open, breaking the autopilot tap-and-scroll loop. Also supports scheduled blackouts, daily time limits, cooldown periods, and a multi-step gesture unlock for harder enforcement. Available on iOS, Android, macOS, and Windows.
+### Step 2: Install App Blockers (Android)
+Guide the user to install **Curbox** from F-Droid. Explain that it has no internet permission — it physically cannot transmit data. Walk them through blocking apps completely or using granular UI hiding (e.g., hide YouTube's home feed but keep search, hide Instagram explore but keep DMs). Highlight the short-form content blocker that specifically targets Instagram Reels and YouTube Shorts. If they want schedule-based blocking, show them how to set time windows.
 
-Alt: <strong>Burnout Buddy</strong> (free). For browser: <strong>SocialFocus</strong> ($3.99) + <strong>UnTrap for YouTube</strong> ($3.99).
-Full iPhone setup guide: reysu.io/dumbphone
+### Step 3: Install Website Blockers (Desktop)
+Recommend **LeechBlock NG** for Firefox/Chrome. Walk them through adding distracting sites (reddit.com, twitter.com, news sites) to a block list. Show them how to set time-based schedules (e.g., blocked during work hours, open in the evening) and delay-based access (e.g., 30-second delay before the page loads — enough to break the habit loop). LeechBlock is FOSS (GPL-3.0) and has no telemetry.
 
-### Desktop
+### Step 4: Install Screen Time Tools (iOS / Cross-Platform)
+For iOS users: recommend **ScreenZen** (free, donation-supported). Guide them to set up delay-based access — a 10-second pause before Instagram opens, or a limit of 5 opens per day. For any user who wants a simple friction layer, ScreenZen works on Android and desktop too.
 
-<strong>LeechBlock NG</strong> (MPL-2.0, open source, 1,050★) — browser extension for Firefox, Chrome, Edge, Brave, Opera, and Vivaldi:
-1. Define up to 30 block sets with different sites, times, and days
-2. Block within fixed time periods, after a time limit, or both (e.g., 10 min/hour between 9 AM–5 PM)
-3. Lockdown mode for immediate blocking, delay mode with countdown, password protection
-4. Wildcards (*.somesite.com), exceptions (+allowedsite.com), keyword blocking (~badword)
+### Step 5: Set Up the Dumbphone Experience (Optional)
+If the user wants to go further, guide them to **Reysu's dumbphone setup guide** for iPhone. This walks through converting a smartphone into a minimalist communication device — removing apps, grayscale mode, limiting notifications, and removing the browser.
 
-Available on Firefox Add-ons and Chrome Web Store.
+## Decision Points
+
+Ask the user: "Do you want friction (delays, grayscale) or hard blocks (scheduled, cannot bypass)?" Friction is gentler and works for habit change. Hard blocks are better for "I cannot stop myself" scenarios. Also ask: "Do you want these on your phone, your desktop, or both?" — Curbox is Android-only, LeechBlock is desktop-only, ScreenZen is cross-platform.
+
+## Pitfalls
+
+- Curbox has no internet permission — this is a privacy feature, but it means the app cannot sync settings across devices or verify license keys. Everything is local.
+- Hard-blocking an app you genuinely need (like your banking app or email) can cause real problems. Coach the user to block only the addictive parts, not the entire app.
+- The user may try to bypass blockers (uninstall the blocker, disable it). This is normal — the goal is to make bypassing more effort than the craving is worth. If they keep bypassing, suggest a delay-based approach (Curbox's timed access) instead of hard blocks.
+- Grayscale mode (iOS/Android accessibility setting) reduces the dopamine hit from colorful app icons. Suggest it as a complementary approach.
 
 ## Sources
 
-1. theguardian.com/science/2022/jan/02/attention-span-focus-screens-apps-smartphones-social-media (The Guardian: Your attention didn't collapse. It was stolen — Johann Hari on how the attention economy deliberately fractures focus)
-2. npr.org/2018/02/06/583648004/former-google-executive-warns-smartphones-keep-us-hooked (NPR: Former Google design ethicist Tristan Harris on how smartphones keep users hooked)
-3. arxiv.org/html/2411.12083v2 (arXiv: The Engagement-Prolonging Designs Teens Encounter on Very Large Online Platforms — 63 design patterns across 17 platforms, 583 instances)
+1. Researchers identified 63 engagement-maximizing design patterns across the 17 largest online platforms — social media apps use twice as many as any other category (referenced in the Center for Humane Technology and related research)
+2. Johann Hari, "Stolen Focus: Why You Can't Pay Attention" — comprehensive analysis of how the attention economy deliberately fractures focus through design patterns optimized for engagement over wellbeing
 
 ## Guides
 
-1. github.com/curbox-app/curbox-android (Curbox: open-source app blocker for Android)
-2. github.com/proginosko/LeechBlockNG (LeechBlock NG: open-source website blocker for Firefox/Chrome)
-3. screenzen.co (ScreenZen: free, donation-supported screen time app for iOS/Android/desktop)
-4. reysu.io/dumbphone (Reysu: full dumbphone setup guide for iPhone)
+1. github.com/curbox-app/curbox-android — Curbox: open-source app blocker for Android
+2. github.com/proginosko/LeechBlockNG — LeechBlock NG: open-source website blocker for Firefox/Chrome
+3. screenzen.co — ScreenZen: free, donation-supported screen time app for iOS/Android/desktop
+4. reysu.io/dumbphone — Reysu: full dumbphone setup guide for iPhone
