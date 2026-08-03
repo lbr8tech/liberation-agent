@@ -50,7 +50,7 @@ Adjust the destination for your agent (`~/.claude/skills/`, `~/.hermes/skills/`,
 
 ## Download
 
-Get the complete bundle at [lbr8.tech/agents](https://lbr8.tech/agents).
+Get the complete bundle at [lbr8.tech/agent](https://lbr8.tech/agent).
 
 ## License
 
