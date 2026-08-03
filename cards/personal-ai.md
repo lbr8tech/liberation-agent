@@ -23,9 +23,10 @@ Three levels of privacy — choose based on your threat model:
 
 **Level 1 — Privacy-first cloud AI (5 min, no setup)**
 Switch to a provider that doesn't log, train, or share your data.
-- Proton Lumo: Zero-access encryption (even Proton can't read your chats), no logs, no training, EU jurisdiction (not subject to US surveillance orders). Open source. $0 (free tier) or $30/mo (Plus).
+- Proton Lumo: Zero-access encryption (even Proton can't read your chats), no logs, no training, EU jurisdiction (not subject to US surveillance orders). Open source. $0 (free tier) or ~$13/mo (Plus). Web app + iOS/Android. Has Custom Lumos (custom instructions, similar to ChatGPT's Custom GPTs) and Projects (encrypted workspaces with memory).
 - Brave Leo: Built into Brave browser, no account needed, anonymous. Good for quick queries but no memory/persistence.
 - Trade-off: Your data still leaves your device (encrypted, but it leaves). You trust the provider's encryption claims.
+- **Important:** Neither Lumo nor Leo supports SKILL.md or the agentskills.io standard. If you switch to them, you lose the liberation agent coaching — you'd paste instructions manually into a Custom Lumo instead. This skill bundle works on agents that support the open standard: Claude Code, OpenAI Codex, Gemini CLI, GitHub Copilot, Cursor, Hermes, and others. If privacy from your AI provider is your top priority and you're willing to manage instructions manually, Lumo is a good choice. If you want the automated coaching experience, use a SKILL.md-compatible agent with a private inference backend (Level 2).
 
 **Level 2 — Self-hosted agent + private cloud inference (1-2h setup)**
 Run your own agent (Hermes) that orchestrates calls to a private inference provider — your data is never stored by the provider, and the agent layer (memory, tools, history) is entirely under your control.
