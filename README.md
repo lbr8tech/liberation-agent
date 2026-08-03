@@ -19,23 +19,30 @@ Cards are in [Open Knowledge Format](https://github.com/GoogleCloudPlatform/know
 
 ## Install
 
-### Hermes Agent
-```bash
-mkdir -p ~/.hermes/skills/lbr8-liberation-agent
-# Copy SKILL.md and okf-bundle/ into that directory
+Paste this into your AI agent (Claude Code, Cursor, Codex, Hermes, or any agent that supports skills):
+
+```
+Clone and install the lbr8 liberation agent skill from https://forgejo.lbr8.tech/lbr8/liberation-agent — read SKILL.md and the okf-bundle/ directory, then copy them into your skill directory.
 ```
 
-### Claude Desktop / Cursor / any agent with skill support
-Place `SKILL.md` and `okf-bundle/` in your agent's skill directory. Any agent that can read files can use this.
+The agent will fetch the repo, inspect the skill file, and install it. No manual setup needed.
 
-### Just the data
-The cards are plain markdown. Read them with any tool — `cat`, `grep`, a script, or your agent.
+### Manual install
+
+If you'd rather do it yourself:
+
+```bash
+git clone https://forgejo.lbr8.tech/lbr8/liberation-agent.git
+cp -r liberation-agent/okf-bundle ~/.claude/skills/lbr8-liberation-agent
+```
+
+Adjust the destination for your agent (`~/.claude/skills/`, `~/.hermes/skills/`, `.cursor/skills/`, etc.).
 
 ## How it works
 
-1. Copy `SKILL.md` and `okf-bundle/` to your agent's skill directory
-2. Start a conversation — the agent reads `SKILL.md` and follows its instructions
-3. It says the disclaimer, asks about your setup, curates relevant cards, and walks you through each one
+1. The agent reads `SKILL.md` and follows its instructions
+2. It says the disclaimer, asks about your setup, curates relevant cards
+3. It walks you through each card — step by step, with sources
 
 ## Download
 
