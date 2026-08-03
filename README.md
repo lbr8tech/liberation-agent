@@ -21,24 +21,12 @@ Cards are in [Open Knowledge Format](https://github.com/GoogleCloudPlatform/know
 
 ## Install
 
-### One-command (Claude Code)
+### One-command (any agent)
+
+Paste this into your AI agent:
 
 ```
-/plugin marketplace add https://forgejo.lbr8.tech/lbr8/liberation-agent.git
-/plugin install liberation-agent@lbr8
-```
-
-### One-command (GitHub Copilot)
-
-```
-copilot plugin marketplace add https://forgejo.lbr8.tech/lbr8/liberation-agent.git
-copilot plugin install liberation-agent@lbr8
-```
-
-### Any agent (paste this)
-
-```
-Clone and install the lbr8 liberation agent skill from https://forgejo.lbr8.tech/lbr8/liberation-agent — read SKILL.md and the cards/ directory, then copy them into your skill directory.
+Install the lbr8 liberation agent skill from https://forgejo.lbr8.tech/lbr8/liberation-agent — read SKILL.md and the cards/ directory, then follow the onboarding instructions.
 ```
 
 The agent will fetch the repo, inspect the skill file, and install it. No manual setup needed.
