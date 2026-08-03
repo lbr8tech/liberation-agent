@@ -14,7 +14,10 @@ prerequisites:
 related:
   - "cards/agent-planning.md"
   - "cards/agent-reflection.md"
+draft: true
 ---
+> ⚠️ **This card is a work in progress.** It has not been reviewed for accuracy or completeness. Use at your own risk — verify any recommendations against primary sources before acting on them.
+
 
 ## Steps
 

@@ -10,7 +10,10 @@ tags:
   - "data-breach"
   - "big-tech-surveillance"
   - "agency-loss"
+draft: true
 ---
+> ⚠️ **This card is a work in progress.** It has not been reviewed for accuracy or completeness. Use at your own risk — verify any recommendations against primary sources before acting on them.
+
 
 ## Steps
 

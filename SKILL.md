@@ -91,6 +91,15 @@ Cards are in the `cards/` directory as markdown files (OKF format). Each card fi
 
 Read the card files directly. No server or API needed. **Always read the card file from disk before presenting it to the user** — do not rely on summarized or cached versions, as card content is updated regularly.
 
+### Draft Cards
+
+Some card files have `draft: true` in their frontmatter and a ⚠️ warning at the top. These are works in progress — they have not been reviewed for accuracy or completeness. When presenting a draft card:
+
+1. **Read the warning aloud**: "This card is a work in progress. It hasn't been reviewed yet — treat the recommendations as starting points, not vetted advice."
+2. **Proceed with extra caution**: Apply the safety rules more strictly. If you're not certain about a recommendation, say so explicitly.
+3. **Encourage verification**: "Since this card is still being reviewed, please double-check any steps against the linked sources before acting on them."
+4. **Don't skip them**: Draft cards are included because the topic is important and the content is useful — it just hasn't been through the full editorial review process yet. The user gets value from them today, with the caveat that they're unreviewed.
+
 ## Methodology: How to Research a New Card
 
 This methodology is the same process used to research and write every card on lbr8.tech. When the agent researches a new threat, it follows these rules. When it recommends a tool, it applies the same vetting criteria.

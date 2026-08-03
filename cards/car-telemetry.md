@@ -13,7 +13,10 @@ tags:
 related:
   - "cards/smart-tv-blocking.md"
   - "cards/network-segmentation.md"
+draft: true
 ---
+> ⚠️ **This card is a work in progress.** It has not been reviewed for accuracy or completeness. Use at your own risk — verify any recommendations against primary sources before acting on them.
+
 
 ## Steps
 
