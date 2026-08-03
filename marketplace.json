@@ -1,0 +1,23 @@
+{
+  "name": "lbr8",
+  "description": "lbr8 liberation tools — privacy coaching agents and protocol cards",
+  "plugins": [
+    {
+      "name": "liberation-agent",
+      "description": "Interactive liberation coach backed by the lbr8 protocol card deck. Guides users through implementing privacy hardening step by step.",
+      "version": "3.0.0",
+      "author": "lbr8.tech",
+      "license": "AGPLv3",
+      "repository": "https://forgejo.lbr8.tech/lbr8/liberation-agent",
+      "source": {
+        "path": "./",
+        "type": "git"
+      },
+      "interface": {
+        "displayName": "lbr8 Liberation Agent",
+        "category": "Privacy & Security",
+        "capabilities": ["Read"]
+      }
+    }
+  ]
+}

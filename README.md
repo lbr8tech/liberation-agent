@@ -1,28 +1,44 @@
 # lbr8 Liberation Agent
 
-An OKF knowledge bundle + skill file that turns the [lbr8 protocol card deck](https://lbr8.tech/cards) into an interactive liberation coach. Any AI agent that can read files can use this — no server, no API, no dependencies.
+An [Agent Skills](https://agentskills.io)-compatible skill that turns the [lbr8 protocol card deck](https://lbr8.tech/cards) into an interactive liberation coach. Any AI agent that supports the open SKILL.md standard can use this — Claude Code, OpenAI Codex, Gemini CLI, GitHub Copilot, Cursor, Hermes, and 20+ others. No server, no API, no dependencies.
 
 ## What's in here
 
 ```
-okf-bundle/
+liberation-agent/
   SKILL.md              # Agent instructions: methodology, workflow, safety rules
   onboarding.md         # Onboarding quiz protocol (agent curates cards)
-  index.md             # Card deck index with links to all cards
-  cards/
+  index.md              # Card deck index with links to all cards
+  cards/                # 66 protocol cards (plain markdown + YAML frontmatter)
     notification-audit.md
     password-manager.md
-    ... (66 card files total)
+    ...
+  marketplace.json      # Plugin marketplace manifest for one-command install
+  LICENSE               # AGPLv3
 ```
 
 Cards are in [Open Knowledge Format](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md) — plain markdown with YAML frontmatter. Any tool, script, or agent can read them.
 
 ## Install
 
-Paste this into your AI agent (Claude Code, Cursor, Codex, Hermes, or any agent that supports skills):
+### One-command (Claude Code)
 
 ```
-Clone and install the lbr8 liberation agent skill from https://forgejo.lbr8.tech/lbr8/liberation-agent — read SKILL.md and the okf-bundle/ directory, then copy them into your skill directory.
+/plugins marketplace add https://forgejo.lbr8.tech/lbr8/liberation-agent
+/plugins install liberation-agent@lbr8
+```
+
+### One-command (GitHub Copilot)
+
+```
+copilot plugin marketplace add lbr8/liberation-agent
+copilot plugin install liberation-agent@lbr8
+```
+
+### Any agent (paste this)
+
+```
+Clone and install the lbr8 liberation agent skill from https://forgejo.lbr8.tech/lbr8/liberation-agent — read SKILL.md and the cards/ directory, then copy them into your skill directory.
 ```
 
 The agent will fetch the repo, inspect the skill file, and install it. No manual setup needed.
@@ -33,10 +49,10 @@ If you'd rather do it yourself:
 
 ```bash
 git clone https://forgejo.lbr8.tech/lbr8/liberation-agent.git
-cp -r liberation-agent/okf-bundle ~/.claude/skills/lbr8-liberation-agent
+cp -r liberation-agent ~/.claude/skills/liberation-agent
 ```
 
-Adjust the destination for your agent (`~/.claude/skills/`, `~/.hermes/skills/`, `.cursor/skills/`, etc.).
+Adjust the destination for your agent (`~/.claude/skills/`, `~/.hermes/skills/`, `.cursor/skills/`, `~/.gemini/skills/`, etc.).
 
 ## How it works
 
