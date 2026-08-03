@@ -24,14 +24,14 @@ Cards are in [Open Knowledge Format](https://github.com/GoogleCloudPlatform/know
 ### One-command (Claude Code)
 
 ```
-/plugins marketplace add https://forgejo.lbr8.tech/lbr8/liberation-agent
-/plugins install liberation-agent@lbr8
+/plugin marketplace add https://forgejo.lbr8.tech/lbr8/liberation-agent.git
+/plugin install liberation-agent@lbr8
 ```
 
 ### One-command (GitHub Copilot)
 
 ```
-copilot plugin marketplace add lbr8/liberation-agent
+copilot plugin marketplace add https://forgejo.lbr8.tech/lbr8/liberation-agent.git
 copilot plugin install liberation-agent@lbr8
 ```
 
