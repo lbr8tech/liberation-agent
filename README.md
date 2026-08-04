@@ -21,26 +21,38 @@ Cards are in [Open Knowledge Format](https://github.com/GoogleCloudPlatform/know
 
 ## Install
 
-### One-command (any agent)
+### Claude.ai
 
-Paste this into your AI agent:
+1. Download the ZIP from [lbr8.tech/agent](https://lbr8.tech/agent) (click "Download skill bundle").
+2. Go to **Settings > Capabilities** and enable **Code execution and file creation**.
+3. Go to **Customize > Skills**, click **+**, then **Upload a skill**.
+4. Select the ZIP file. Toggle the skill on.
 
-```
-Install the lbr8 liberation agent skill from https://forgejo.lbr8.tech/lbr8/liberation-agent — read SKILL.md and the cards/ directory, then follow the onboarding instructions.
-```
-
-The agent will fetch the repo, inspect the skill file, and install it. No manual setup needed.
-
-### Manual install
-
-If you'd rather do it yourself:
+### Claude Code, Hermes, Codex, Gemini CLI, and other CLI agents
 
 ```bash
 git clone https://forgejo.lbr8.tech/lbr8/liberation-agent.git
 cp -r liberation-agent ~/.claude/skills/liberation-agent
 ```
 
-Adjust the destination for your agent (`~/.claude/skills/`, `~/.hermes/skills/`, `.cursor/skills/`, `~/.gemini/skills/`, etc.).
+Adjust the destination for your agent (`~/.claude/skills/`, `~/.hermes/skills/`, `~/.gemini/skills/`, `~/.codex/skills/`, etc.). The skill is auto-discovered on next launch.
+
+### ChatGPT, Gemini, and other web-based AI
+
+1. Download the ZIP from [lbr8.tech/agent](https://lbr8.tech/agent) and unzip it.
+2. Open `SKILL.md` and copy its contents.
+3. Paste into your AI's custom instructions or a new Project / Gem.
+4. Copy the contents of `onboarding.md` and add that too.
+
+The coaching instructions live in `SKILL.md` and the onboarding quiz lives in `onboarding.md`. Your AI will follow them for the rest of the conversation.
+
+### Or just ask your AI
+
+```
+Install the lbr8 liberation agent skill from https://forgejo.lbr8.tech/lbr8/liberation-agent — read SKILL.md and the cards/ directory, then follow the onboarding instructions.
+```
+
+If your agent can fetch URLs and install skills itself, paste this. Not all agents support this — Claude.ai and ChatGPT will refuse for security reasons, and that's expected. Use the methods above instead.
 
 ## How it works
 
