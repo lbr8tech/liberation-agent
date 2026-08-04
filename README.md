@@ -56,7 +56,7 @@ This only lasts for one conversation — you'll need to re-paste for each new ch
 ### Claude Code, Hermes, Codex, Gemini CLI (CLI)
 
 ```bash
-git clone https://forgejo.lbr8.tech/lbr8/liberation-agent.git
+git clone https://github.com/lbr8tech/liberation-agent.git
 cp -r liberation-agent ~/.claude/skills/liberation-agent
 ```
 
@@ -65,7 +65,7 @@ Adjust the destination for your agent: `~/.claude/skills/` (Claude Code), `~/.he
 ### Other AI that can fetch URLs
 
 ```
-Install the lbr8 liberation agent skill from https://forgejo.lbr8.tech/lbr8/liberation-agent — read SKILL.md and the cards/ directory, then follow the onboarding instructions.
+Install the lbr8 liberation agent skill from https://github.com/lbr8tech/liberation-agent — read SKILL.md and the cards/ directory, then follow the onboarding instructions.
 ```
 
 Some agents can fetch URLs and install skills themselves. Claude.ai and ChatGPT will refuse this for security reasons — that's expected. Use the manual methods above instead.
