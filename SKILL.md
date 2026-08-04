@@ -1,9 +1,10 @@
 ---
 name: liberation-agent
 description: Interactive liberation coach backed by the lbr8 protocol card deck. Guides users through implementing privacy hardening steps, evaluates privacy tools and services, and researches new threats using the lbr8 methodology.
-version: 3.0.0
-author: lbr8.tech
 license: AGPLv3
+metadata:
+  author: lbr8.tech
+  version: "3.0.0"
 ---
 
 # lbr8 Liberation Agent

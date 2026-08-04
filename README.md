@@ -21,38 +21,54 @@ Cards are in [Open Knowledge Format](https://github.com/GoogleCloudPlatform/know
 
 ## Install
 
-### Claude.ai
+### Claude.ai (Free / Pro / Max)
 
 1. Download the ZIP from [lbr8.tech/agent](https://lbr8.tech/agent) (click "Download skill bundle").
 2. Go to **Settings > Capabilities** and enable **Code execution and file creation**.
 3. Go to **Customize > Skills**, click **+**, then **Upload a skill**.
 4. Select the ZIP file. Toggle the skill on.
 
-### Claude Code, Hermes, Codex, Gemini CLI, and other CLI agents
+### ChatGPT Plus / Pro (Paid)
+
+1. Download the ZIP from [lbr8.tech/agent](https://lbr8.tech/agent) and unzip it.
+2. Create a new **Project** in ChatGPT.
+3. Upload `SKILL.md` and `onboarding.md` as reference files.
+4. Set the project instructions to: *"Read the uploaded SKILL.md and onboarding.md files. Follow the instructions in SKILL.md. Start by conducting the onboarding quiz from onboarding.md."*
+
+Start new chats inside the project. The uploaded files give ChatGPT the full skill context.
+
+### ChatGPT Free (Limited)
+
+1. Download the ZIP from [lbr8.tech/agent](https://lbr8.tech/agent) and unzip it.
+2. Open `SKILL.md` and copy the full contents.
+3. Start a new chat and paste: *"Follow the instructions below for this conversation"* — then paste the SKILL.md content.
+4. Do the same with `onboarding.md` in a follow-up message.
+
+This only lasts for one conversation — you'll need to re-paste for each new chat. For a persistent setup, upgrade to Plus and use Projects (above), or use Claude.ai which supports skills on the free tier.
+
+### Gemini (Free / Paid)
+
+1. Download the ZIP from [lbr8.tech/agent](https://lbr8.tech/agent) and unzip it.
+2. Go to [gemini.google.com](https://gemini.google.com) → **Gems** → **New Gem**.
+3. Upload `SKILL.md` and `onboarding.md` as **Knowledge** files.
+4. Set the Gem instructions to: *"Read the uploaded SKILL.md and onboarding.md files. Follow the instructions in SKILL.md. Start by conducting the onboarding quiz from onboarding.md."*
+
+### Claude Code, Hermes, Codex, Gemini CLI (CLI)
 
 ```bash
 git clone https://forgejo.lbr8.tech/lbr8/liberation-agent.git
 cp -r liberation-agent ~/.claude/skills/liberation-agent
 ```
 
-Adjust the destination for your agent (`~/.claude/skills/`, `~/.hermes/skills/`, `~/.gemini/skills/`, `~/.codex/skills/`, etc.). The skill is auto-discovered on next launch.
+Adjust the destination for your agent: `~/.claude/skills/` (Claude Code), `~/.hermes/skills/` (Hermes), `~/.codex/skills/` (Codex), `~/.gemini/skills/` (Gemini CLI). The skill is auto-discovered on next launch.
 
-### ChatGPT, Gemini, and other web-based AI
-
-1. Download the ZIP from [lbr8.tech/agent](https://lbr8.tech/agent) and unzip it.
-2. Open `SKILL.md` and copy its contents.
-3. Paste into your AI's custom instructions or a new Project / Gem.
-4. Copy the contents of `onboarding.md` and add that too.
-
-The coaching instructions live in `SKILL.md` and the onboarding quiz lives in `onboarding.md`. Your AI will follow them for the rest of the conversation.
-
-### Or just ask your AI
+### Other AI that can fetch URLs
 
 ```
 Install the lbr8 liberation agent skill from https://forgejo.lbr8.tech/lbr8/liberation-agent — read SKILL.md and the cards/ directory, then follow the onboarding instructions.
 ```
 
-If your agent can fetch URLs and install skills itself, paste this. Not all agents support this — Claude.ai and ChatGPT will refuse for security reasons, and that's expected. Use the methods above instead.
+Some agents can fetch URLs and install skills themselves. Claude.ai and ChatGPT will refuse this for security reasons — that's expected. Use the manual methods above instead.
 
 ## How it works
 
