@@ -27,6 +27,7 @@ Based on the user's needs, recommend one of these:
 - **Organic Maps** (recommended for most users): Free, open source, offline maps based on OpenStreetMap. Turn-by-turn navigation, search, and points of interest. No account, no tracking, no ads. Lightweight (~30MB per region). Best for driving, walking, and basic navigation.
 - **OsmAnd** (for power users): Feature-rich offline maps with topographic layers, hiking/cycling routes, and vehicle profiles (car, bike, pedestrian, public transport). The F-Droid version removes the download cap. More complex but more capable.
 - **CoMaps** (community fork of Organic Maps): Nonprofit, Codeberg-hosted, same codebase as Organic Maps. Launched May 2025 after Organic Maps' governance crisis. If the user already uses Organic Maps, CoMaps is a drop-in replacement.
+- **Apple Maps** (iOS fallback): Collects fewer data types than Google, and Apple says search/navigation data isn't associated with the user's account. As of August 2026 it's no longer ad-free: sponsored listings now appear in Suggested Places before search and in search results, marked with a blue "Ad" badge [4]. Apple says the ads are contextual — based on what the user searches for, not their location history — and that personal data stays on-device. Recommend treating ad placement as advertising, not an Apple recommendation.
 
 ### Step 2: Install and Download Maps
 Guide the user to install from F-Droid (or Aurora Store/App Store). Walk them through downloading offline maps for the regions they need:
@@ -64,6 +65,7 @@ Ask the user: "Are you a hiker, cyclist, or off-road traveler?" If yes, recommen
 1. apnews.com/article/828aefab64d4411bac257a07c1af0ecb — Associated Press: Google tracks your movements, like it or not — AP investigation found Google stored location data even with Location History off, via hidden Web & App Activity setting; led to $391.5M settlement with 40 states
 2. arstechnica.com/tech-policy/2026/06/supreme-court-ruling-guts-governments-use-of-geofence-warrants/ — Ars Technica: Supreme Court rules geofence warrants are Fourth Amendment searches — 6-3 decision in Chatrie v. United States, June 2026; Google received 11,000+ geofence warrants by 2020
 3. 404media.co/google-leak-reveals-thousands-of-privacy-incidents/ — 404 Media: internal Google database obtained by 404 Media reveals thousands of employee-reported privacy incidents over six years — including leaked trip data, home addresses, and children's locations
+4. 9to5mac.com/2026/08/25/apple-maps-launches-ads-on-iphone-heres-whats-new/ — 9to5Mac: Apple Maps launches ads on iPhone — sponsored listings confirmed rolling out in US/Canada starting August 2026, in Suggested Places before search and in search results with a blue "Ad" badge; quotes Apple saying ads are contextual and personal data stays on-device
 
 ## Guides
 
