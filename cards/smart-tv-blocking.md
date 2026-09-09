@@ -106,5 +106,6 @@ Also ask: **What brand is your TV?** Samsung and LG settings are organized diffe
 
 ## Guides
 
-1. github.com/hagezi/dns-blocklists — HaGeZi: DNS blocklists — smart TV and device tracking categories
-2. github.com/Perflyst/PiHoleBlocklist/blob/master/SmartTV.txt — Perflyst: smart TV blocklist for Pi-hole/AdGuard Home
+1. youtube.com/watch?v=oeqUHEp4sYM — Linus Tech Tips: How to Stop Smart TV Spying — practical walkthrough, August 2026
+2. github.com/hagezi/dns-blocklists — HaGeZi: DNS blocklists — smart TV and device tracking categories
+3. github.com/Perflyst/PiHoleBlocklist/blob/master/SmartTV.txt — Perflyst: smart TV blocklist for Pi-hole/AdGuard Home
