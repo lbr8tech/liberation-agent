@@ -17,7 +17,7 @@ This card is about auditing installed apps and their permissions. Use it when th
 
 ## Why This Matters
 
-Every app on your phone is a potential surveillance endpoint. Apps collect location, contacts, microphone, and camera data — often through the advertising ecosystem without the app developer even knowing [1]. Data brokers buy this data and sell it to advertisers, law enforcement, and intelligence agencies [2][4]. The Patternz spy tool alone monitored billions of phones through 600,000+ ordinary apps [3]. Fewer apps means fewer attack surfaces.
+Every app on your phone is a potential surveillance endpoint. The scale is measured, not hypothetical: Oxford researchers analyzing ~1 million Google Play apps found roughly 9 in 10 share data with Google, the median app sends data to 10 third-party companies, and 1 in 5 shares with 20 or more [5]. Apps collect location, contacts, microphone, and camera data — often through the advertising ecosystem without the app developer even knowing [1]. Data brokers buy this data and sell it to advertisers, law enforcement, and intelligence agencies [2][4]. The Patternz spy tool alone monitored billions of phones through 600,000+ ordinary apps [3]. Fewer apps means fewer attack surfaces.
 
 ## Coaching Flow
 
@@ -56,6 +56,7 @@ No onboarding-level questions needed — the agent already knows the platform an
 2. theverge.com/2024/10/23/24277679/atlas-privacy-babel-street-data-brokers-locate-x-tracking (The Verge: Data brokers using ads to track any phone — Locate X traced a phone to an abortion clinic)
 3. 404media.co/inside-global-phone-spy-tool-patternz-nuviad-real-time-bidding/ (404 Media: Patternz spy tool monitoring billions through 600,000+ ordinary apps)
 4. arstechnica.com/tech-policy/2026/03/fbi-started-buying-americans-location-data-again-kash-patel-confirms/ (Ars Technica: FBI resumed buying Americans' location data without warrants)
+5. arxiv.org/abs/1804.03603 (Binns et al., University of Oxford: Third Party Tracking in the Mobile Ecosystem — ~1 million Google Play apps analyzed; ~90% share data with Google, median app sends data to 10 third parties, 20% share with 20+)
 
 ## Guides
 

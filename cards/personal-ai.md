@@ -15,6 +15,16 @@ related:
   - "cards/dns-blocking.md"
 ---
 
+## Why This Matters
+
+Social media commodified your attention. AI commodifies your interiority — your doubts, fears, relationships, and political beliefs. Every conversation becomes training data. AI chats have no legal privilege: ChatGPT logs have been used as criminal evidence, and providers may scan conversations and refer users to law enforcement. This is not hypothetical: in September 2026, OpenAI conceded it "cannot rule out that de-identified data derived from their usage of our products helped improve our models" — a statement issued amid allegations (by NYU mathematician Tristan Buckmaster, working with Anthropic researcher Levent Alpoge) that OpenAI learned of their months-long approach to the Navier-Stokes Millennium Prize problem and raced an 88-hour AI solve of it. OpenAI denies using their prompts or proofs. If a leading mathematician can lose control of his research process to models improved on user sessions, so can you.
+
+## Sources
+
+1. france24.com/en/technology/20260909-openai-says-models-solved-one-of-math-hardest-problems-researchers-cry-foul — France 24/AFP: OpenAI says its models solved one of math's hardest problems as researchers cry foul — 88-hour Navier-Stokes claim, Buckmaster/Alpoge credit dispute, OpenAI concedes it "cannot rule out" that de-identified usage data improved its models
+2. futurism.com/openai-scanning-conversations-police — Futurism: OpenAI scanning ChatGPT conversations and reporting content to law enforcement
+3. rollingstone.com/culture/culture-features/chatbot-history-evidence-criminal-case-1235444944/ — Rolling Stone: Chatbot histories becoming evidence in criminal cases
+
 ## Steps
 
 ### General
