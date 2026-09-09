@@ -58,8 +58,8 @@ Walk the user through every privacy-related setting on their TV. This is reversi
 ### Level 2: DNS-Level Blocking (requires router DNS setup)
 
 If the user already has a DNS resolver (AdGuard Home, Pi-hole, or NextDNS) configured on their router (prerequisite: router-dns card), guide them to add smart TV tracking domain blocklists:
-- Add HaGeZi's Smart TV blocklist [1] to their DNS resolver
-- Add Perflyst's Smart TV blocklist [2] for additional coverage
+- Add HaGeZi's Smart TV blocklist [2] to their DNS resolver
+- Add Perflyst's Smart TV blocklist [3] for additional coverage
 - After adding, the TV should be rebooted, then check the DNS query logs to confirm tracking domains are being blocked
 
 Note: Samsung and Roku hardcode 8.8.8.8 as a fallback DNS, which can bypass DNS-level blocking. If the user notices TV still tracking after DNS setup, escalate to Level 3.
@@ -89,6 +89,7 @@ Also ask: **What brand is your TV?** Samsung and LG settings are organized diffe
 - Warn that firmware updates can re-enable tracking after users disabled it (this has happened with multiple manufacturers). Check settings periodically.
 - Warn that Samsung and Roku hardcode 8.8.8.8 as fallback DNS to bypass user-configured DNS — if you're doing DNS-level blocking, verify it's actually working by checking the DNS query logs.
 - Warn that HDMI-CEC metadata can be used to track device usage patterns — this is harder to block and may require disabling CEC.
+- Warn that you mostly cannot verify from the network that blocking worked: nearly all TV telemetry is encrypted and most TVs provide no way to install a custom certificate, so packet captures show domains and traffic volumes — never what the data contains. Settings lockdown and DNS blocklists cut observable traffic, but neither can prove collection stopped. The one state you can be sure of is physical: Wi-Fi credentials removed and Ethernet unplugged — factory-reset first if the TV has ever joined your Wi-Fi, so saved networks are gone. Present Levels 1 and 2 as meaningful harm reduction, not proof; Level 3 is the only fix that comes with certainty. (The Linus Tech Tips guide [1] reaches the same conclusion after failing to decrypt their own test TVs' traffic.)
 - Warn that LG has pushed adware onto monitors via Windows Update (2026) and force-installed Microsoft Copilot on TV home screens (2025) — the TV platform is actively hostile to user privacy.
 - If the user is considering a new TV, recommend a commercial display (business/education model) which has no smart platform — it's a dumb monitor with multiple HDMI inputs.
 - The cleanest solution is a commercial display + external media box, eliminating the smart platform entirely.
