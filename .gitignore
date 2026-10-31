@@ -1,0 +1,6 @@
+.locks/
+*.lock
+*.swp
+*~
+__pycache__/
+*.pyc
